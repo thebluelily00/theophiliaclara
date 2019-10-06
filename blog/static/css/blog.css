@@ -15,8 +15,9 @@ p{
  text-indent:64px;
 }
 
-html{
-  /*background:linear-gradient(#ba5370, #f4e2d8);*/
+html, body{
+  margin:0px;
+  padding:0px;
 }
 
 *{
@@ -115,12 +116,11 @@ html{
   height:100vh;
   position:fixed;
   top:0px;
+  /*left:0px;*/
   font-family:'Abril Fatface';
   font-weight:normal;
   text-transform:lowercase;
   transition:0.5s;
   transition-timing-function: ease-in-out;
-  background:white;
   background:#e9f1dd;
-}
 }
