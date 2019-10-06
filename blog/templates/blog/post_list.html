@@ -1,12 +1,21 @@
-<ul>
-{% for post in posts %}
-<li>{{ post.tag }}</li>
-{% endfor %}
-</ul>
-{% for post in posts %}
-<div class="post {{ post.tag }}">
-  <h2>{{ post.published_date }}</h2>
-  <h1><a href="">{{ post.title }}</a></h1>
-  <p>{{ post.text|linebreaksbr }}</p>
-</div>
-{% endfor %}
+{% extends 'blog/base.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <ul>
+    {% for post in posts %}
+    <li>{{ post.tag }}</li>
+    {% endfor %}
+    </ul>
+    {% for post in posts %}
+    <div class="post {{ post.tag }}">
+      <h2>{{ post.published_date }}</h2>
+      <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+      <span><a href="{% url 'tags' tag=post.tag %}">{{ post.tag }}</a></span>
+    </div>
+    {% endfor %}
+{% endblock %}
