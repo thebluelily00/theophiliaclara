@@ -2,7 +2,23 @@
 {% block title %}
 Home
 {% endblock %}
+{% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
+{% block css %}
 
+#header h1{
+  margin-top:0px;
+  padding:20px;
+  background:white;
+}
+#header{
+  height:100vh;
+  background: url(https://lh3.googleusercontent.com/Egij9hkBQPBD-tt0J2sjKfOrYTGuImhexcVHvdC3x-s5oFpzuxhl2oB4vgxK0M7lwW_0fLVHjwU0fsainVyBmIVkrqJKiXxURz3ASDYOlD_E4NOEpbLpXO2naWUAvf0RosA-x9t8dMoGMr7rNCmNBvtAplq_0lLp-HeeOLse4_cBm5e7kbtRMEVs4Kc3vqDQWsDq26J8o7ahjDKed_R0v8eU9PaTGQWSwMgzvTaUbup_5cYalBL1Zm-z1371OZVji_Qc9glF1ql_0qewIjuiRQj7O0mRdJBXCo-qhgVBp1o2g3NVeFd4r1qry7GQ8x0TJQpOOYT_UWNEy7AD2FTq-ePfRRf1uEfsor0kLJsnP8wpf8WaV-9qhfYzxHRr8K0YjqrbVCTGqcWcoK9YSk2BWZAd_yivwQcJRUMCGcOm2c0gZx-DltYSEBbh4Y3KootXmrjDM7bYtjxP_CQlk76qLKS83ZSiklWeNXb2v3Cbi3WtME6Xvrgf7_plYH7M1tWAwPIUhQpRSsjEOjQH3LZ6OV9yt0P2OWLw67ZjcEjaNJ2fIZV-eUemwSX9l8E6j1hQ68NRNu_eOHkM1dL9tqS-xvGL2eq3xmUtYUz7TTMFVaotqOzZT28ZjbuCcYxBGanPeU1qRd_cvTRgz1WlZRZKH0jX-ibY7Fzm8M9iUE4Fehua1gAOKPzFyr0=w2204-h1652-no);
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+{% endblock %}
     {% load static %}
 {% block content %}
 <div id="posts">
@@ -12,5 +28,8 @@ Home
     <h4>{{ post.published_date }}</h4>
 </div>
 {% endfor %}
+</div>
+<div class="footer">
+
 </div>
 {% endblock %}

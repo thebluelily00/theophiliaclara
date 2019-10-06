@@ -1,0 +1,54 @@
+{% extends 'blog/base.html' %}
+{% block css %}
+  #open-m{
+    display:none;
+  }
+  html{
+    background: #00467F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-repeat:no-repeat;
+    background-cover:cover;
+    background-position:center;
+    height:100vh;
+  }
+  body{
+    background:;
+    width:25%;
+    margin:10% auto 0px auto;
+    padding:10px 10px 40px 10px;
+    color:white;
+  }
+
+{% endblock %}
+{% block title %}
+Login
+{% endblock %}
+{% block header %}
+Sign In
+{% endblock %}
+{% block content %}
+<div class="all-l">
+  {% if form.errors %}
+          <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+      <form method="post" action="{% url 'login' %}"  id="login">
+      {% csrf_token %}
+          <table id="logint">
+          <tr>
+              <td>{{ form.username.label_tag }}</td>
+              <td>{{ form.username }}</td>
+          </tr>
+          <tr>
+              <td>{{ form.password.label_tag }}</td>
+              <td>{{ form.password }}</td>
+          </tr>
+          </table>
+
+          <input type="submit" value="login" id="cont"/>
+          <input type="hidden" name="next" value="{{ next }}" />
+      </form>
+</div>
+{% endblock %}

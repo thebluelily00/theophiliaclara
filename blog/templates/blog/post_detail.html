@@ -2,17 +2,29 @@
 {% block title %}
 {{ post.title }}
 {% endblock %}
+{% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
 {% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-        {% endif %}
-        <h2>{{ post.title }}</h2>
+    <div class="p">
+        <h1 class='postitle'>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr|safe }}</p>
-        {% if user.is_authenticated %}
-        <a class="far fa-edit" href="{% url 'post_edit' pk=post.pk %}"></a>
+        <a href="/tags/{{ post.tag }}"></a>
+        {% if post.published_date %}
+          <div id="date">
+        {{ post.published_date }}
+          </div>
         {% endif %}
+        {% if user.is_authenticated %}
+        <div id="tools">
+          {% if post.published_date %}
+          {% else %}
+          <a class="fas fa-upload" href="{% url 'post_publish' pk=post.pk %}"></a>
+          {% endif %}
+          <a class="fas fa-edit" href="{% url 'post_edit' pk=post.pk %}"></a>
+          <a class="fas fa-trash-alt" href="{% url 'post_remove' pk=post.pk %}"></a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="footer">
+
     </div>
 {% endblock %}

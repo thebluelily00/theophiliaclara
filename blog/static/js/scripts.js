@@ -26,4 +26,6 @@ $( document ).ready(function() {
       $('#other').slideDown();
     }
   });
+  var d = new Date();
+  $('.footer').html('<a>&copy '+d.getFullYear()+" Theophilia Clara</a>");
 });

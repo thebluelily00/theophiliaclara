@@ -3,12 +3,20 @@
 h1,h2,h3,h4{
   text-align:center;
 }
-
+html{
+  min-height:100%;
+}
+body{
+  min-height:100vh;
+}
 h1{
   font-size:4em;
-  font-family:'amatic sc','codystar','poiret one';
+  font-family:'Codystar';
 }
 
+.p, .tag{
+  font-family:'Poiret One';
+}
 
 p{
  line-height:200%;
@@ -18,10 +26,6 @@ p{
 html, body{
   margin:0px;
   padding:0px;
-}
-
-*{
-  font-family:Poiret One;
 }
 
 #filter li{
@@ -48,6 +52,11 @@ html, body{
   text-align:left;
 }
 
+#social a{
+  text-decoration:none;
+  color:black;
+}
+
 #menu h2{
   text-align:left;
   text-transform:lowercase;
@@ -58,7 +67,7 @@ html, body{
   transition:0.3s;
 }
 
-#menu h2:hover, #menu li:hover{
+#menu h2:hover, #filter li:hover{
   color:#b06ab3;
   cursor:pointer;
 }
@@ -69,10 +78,12 @@ html, body{
 }
 
 #open-m{
-  font-size:1.5em;
+  font-size:2em;
   margin:10px auto 10px auto;
   width:100%;
   text-align:center;
+  display:block;
+  margin-top:40px;
 }
 
 #close-m{
@@ -122,10 +133,157 @@ html, body{
   text-transform:lowercase;
   transition:0.5s;
   transition-timing-function: ease-in-out;
-  background:#e9f1dd;
+  background:#ebf0ee;
 }
 
 #header h1 a{
   color:black;
   text-decoration: none;
+}
+
+.top li, .footer a{
+  display:inline-block;
+  padding:7px;
+  margin:7px;
+}
+
+.top a, .footer a{
+  text-decoration: none;
+  color:white;
+}
+
+.top, .footer{
+  background:black;
+  color:white;
+  margin-top:0px;
+  text-align:center;
+  font-family:'Poiret One';
+}
+
+.top ul{
+  margin:0px;
+  text-align:center;
+  padding:0px;
+}
+
+#login, #login table{
+  margin:auto;
+  text-align:center;
+}
+
+#tools a{
+  display: inline-block;
+  padding:5px;
+  margin:5px;
+  text-decoration:none;
+  color:black;
+  text-align:center;
+}
+
+#tools{
+  text-align:center;
+}
+
+#date{
+  text-align:center;
+  padding:4px;
+}
+
+.postitle{
+  font-family:'Poiret One';
+}
+
+.footer{
+  position:relative;
+  bottom:0px;
+  left:0px;
+  width:100%;
+}
+
+.editd{
+  font-family:'Poiret One';
+}
+
+.save{
+  background:white;
+  border:none;
+  padding:10px;
+  font-family:'Poiret One';
+  margin:auto;
+  text-align:center;
+  font-weight:bold;
+  font-size:14px;
+  transition-duration:0.5s;
+}
+
+.save:hover{
+  background:#edf3e3;
+}
+
+.editd input, .editd textarea{
+  border:none;
+  padding:10px;
+  width:50%;
+  margin:auto;
+  font-size: 12px;
+  background:#e9f1dd;
+  font-family:'Poiret One';
+
+}
+
+.editd label{
+  color:#a3a89a;
+}
+
+.editd form{
+  margin:auto;
+  text-align:center;
+}
+
+#login{
+  font-family:'Poiret One';
+}
+
+#login input, #id-password, #id-username{
+  border:none;
+  padding:5px;
+  background:transparent;
+  color:white;
+}
+
+#cont{
+  margin-top:20px;
+  background:transparent;
+  font-size:14px;
+  color:white;
+  font-family:'Poiret One';
+  transition-duration: 0.5s;
+}
+
+#cont:hover{
+  background:rgba(255,255,255,0.3);
+}
+
+#logint{
+  border-spacing:10px;
+}
+
+tr td:nth-child(even){
+  border-bottom:1.5px solid white;
+}
+
+#spotify:hover{
+  color:green;
+}
+
+#pin:hover{
+  color:red;
+}
+
+#insta:hover{
+  color:purple;
+}
+
+#spotify, #pin, #insta{
+  transition-duration:0.5s;
 }
