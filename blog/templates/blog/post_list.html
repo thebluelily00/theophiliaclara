@@ -3,19 +3,13 @@
 Home
 {% endblock %}
 
-{% block content %}
     {% load static %}
-    <ul>
-    {% for post in posts %}
-    <li>{{ post.tag }}</li>
-    {% endfor %}
-    </ul>
+{% block content %}
+    
     {% for post in posts %}
     <div class="post {{ post.tag }}">
-      <h2>{{ post.published_date }}</h2>
       <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-      <p>{{ post.text|linebreaksbr }}</p>
-      <span><a href="{% url 'tags' tag=post.tag %}">{{ post.tag }}</a></span>
+        <h3>{{ post.published_date }}</h3>
     </div>
     {% endfor %}
 {% endblock %}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar|Great+Vibes|Poiret+One&display=swap');
+
+h1,h2,h3,h4{
+  text-align:center;
+}
+
+h1{
+  font-size:4em;
+  font-family:'amatic sc','codystar','poiret one';
+}
+
+
+p{
+ line-height:200%;
+ text-indent:64px;
+}
+
+html{
+  /*background:linear-gradient(#ba5370, #f4e2d8);*/
+}
+
+*{
+  font-family:Poiret One;
+}
+
+#filter li{
+  list-style-type:none;
+  padding-bottom:10px;
+  transition-duration: 2000ms;
+  transition-property: text-decoration;
+}
+
+#filter li:hover{
+  text-decoration:underline;
+}
+
+#social li{
+  display:inline-block;
+  padding:10px;
+  margin:auto;
+  text-indent:0px;
+  text-align:center;
+}
+
+#social{
+  margin:auto;
+  text-align:left;
+}
+
+#menu h2{
+  text-align:left;
+  text-transform:lowercase;
+  font-family:'Great vibes';
+}
+
+#menu li{
+  transition:0.3s;
+}
+
+#menu h2:hover, #menu li:hover{
+  color:#b06ab3;
+  cursor:pointer;
+}
+
+#other{
+  transition-duration:0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#open-m{
+  font-size:1.5em;
+  margin:10px auto 10px auto;
+  width:100%;
+  text-align:center;
+}
+
+#close-m{
+  font-size:1.5em;
+  display:block;
+  text-align:center;
+}
+
+#open-m:hover, #close-m:hover, #filter li:hover, #social li:hover{
+  cursor:pointer;
+}
+
+#footer{
+  text-align:center;
+  padding:20px;
+  margin:0px;
+  color:black;
+}
+
+#footer span{
+  display:block;
+}
+
+/* for desktop */
+@media only screen and (max-width: 600px) {
+
+}
+@media only screen and (min-width: 601px){
+
+.p{
+  margin:50px;
+  padding:20px 40px 20px 40px;
+  border:0px solid;
+  color:black;
+  border:black solid;
+}
+
+#menu{
+  padding:50px;
+  width:175px;
+  height:100vh;
+  position:fixed;
+  top:0px;
+  font-family:'Abril Fatface';
+  font-weight:normal;
+  text-transform:lowercase;
+  transition:0.5s;
+  transition-timing-function: ease-in-out;
+  background:white;
+  background:#e9f1dd;
+}
+}
