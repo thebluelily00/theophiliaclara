@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="{% static '/images/tclogo23.png' %}">
     <title>Theophilia Clara | {% block title %}{% endblock %}</title>
-    <link href="https://fonts.googleapis.com/css?family=Codystar|Great+Vibes|Poiret+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Codystar|Great+Vibes|Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <style media="screen">
       {% block css %}{% endblock %}
@@ -37,20 +37,20 @@
     </div>
   <div id="other">
     {% if user.is_authenticated %}
-  <div class="top">
+      <div class="top">
     <ul>
       <li><a href="{% url 'post_new' %}" class='fas fa-plus'></a></li>
       <li><a href="{% url 'post_draft_list' %}" class='fas fa-th-list'></a></li>
       <li><a href="{% url 'logout' %}" class='fas fa-sign-out-alt'></a></li>
     </ul>
   </div>
-  {% endif %}
-  <div id="header">
+    {% endif %}
+    <div id="header">
       <h1>{% block header %}{% endblock %}</h1>
-  </div>
-  <i class="fas fa-bars" id="open-m"></i>
-      {% block content %}
-      {% endblock %}
     </div>
+    <i class="fas fa-bars" id="open-m"></i>
+    {% block content %}
+    {% endblock %}
+  </div>
   </body>
 </html>
