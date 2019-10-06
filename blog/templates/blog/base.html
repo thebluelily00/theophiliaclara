@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="/images/icon.png">
+    <link rel="icon" href="{% static '/images/tclogo23.png' %}">
     <title>Theophilia Clara | {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <script src="https://kit.fontawesome.com/c7f50bcb24.js" crossorigin="anonymous"></script>
@@ -19,15 +19,22 @@
           <li class='tag'><a href="{% url 'tags' tag=post.tag %}"></a>{{ post.tag }}</li>
         {% endfor %}
       </ul>
-    <h2>FOLLOW ON</h2>
-    <ul id="social">
-      <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank"></a></li>
-      <li><a class="fab fa-instagram"></a></li>
+      <h2>FOLLOW ON</h2>
+      <ul id="social">
+        <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank"></a></li>
+        <li><a class="fab fa-instagram"></a></li>
+      </ul>
+    </div>
+  <div id="other">
+    {% if user.is_authenticated %}
+  <div class="top">
+    <ul>
+      <li><a href="{% url 'post_new' %}" class='fas fa-plus'></a></li>
     </ul>
   </div>
-  <div id="other">
+  {% endif %}
   <div id="header">
-      <h1>Theophilia Clara</h1>
+      <h1><a href="/">Theophilia Clara</a></h1>
       <i class="fas fa-bars" id="open-m"></i>
   </div>
       {% block content %}

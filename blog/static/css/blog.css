@@ -124,3 +124,8 @@ html, body{
   transition-timing-function: ease-in-out;
   background:#e9f1dd;
 }
+
+#header h1 a{
+  color:black;
+  text-decoration: none;
+}
