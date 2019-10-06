@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <link rel="icon" href="{% static '/images/tclogo23.png' %}">
     <title>Theophilia Clara | {% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Codystar|Great+Vibes|Poiret+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <style media="screen">
       {% block css %}{% endblock %}
     </style>
     <script src="https://kit.fontawesome.com/c7f50bcb24.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
   </head>
   <body>
