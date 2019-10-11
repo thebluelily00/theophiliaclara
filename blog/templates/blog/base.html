@@ -16,24 +16,27 @@
   </head>
   <body>
     <div id="menu">
-      <i class="fas fa-times" id="close-m"></i>
-      <h2><a href=""></a> ABOUT</h2>
-      <h2>FILTER</h2>
-      <ul id="filter">
-        {% for post in posts %}
-          <li class='tag'><a href="{% url 'tags' tag=post.tag %}"></a>{{ post.tag }}</li>
-        {% endfor %}
-      </ul>
-      <h2>FOLLOW ON</h2>
-      <ul id="social">
-        <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
-        <li><a class="fab fa-instagram" href="https://www.instagram.com/theophiliaclara/" target="blank" id="insta"></a></li>
-        <li><a class="fab fa-spotify" href="#" id="spotify"></a> </li>
-      </ul>
-      {% if user.is_authenticated %}
-      {% else %}
-      <h2><a href="{% url 'login' %}" class='fas fa-sign-in-alt' id="signinin"></a></h2>
-      {% endif %}
+      <div class="cont">
+        <i class="fas fa-times" id="close-m"></i>
+        <h2><a href="/">HOME</a></h2>
+        <h2><a href="{% url 'about' %}">ABOUT</a></h2>
+        <h2>FILTER</h2>
+        <ul id="filter">
+          {% for post in posts %}
+            <li class='tag'><a href="{% url 'tags' tag=post.tag %}">{{ post.tag }}</a></li>
+          {% endfor %}
+        </ul>
+        <h2>FOLLOW ON</h2>
+        <ul id="social">
+          <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
+          <li><a class="fab fa-instagram" href="https://www.instagram.com/theophiliaclara/" target="blank" id="insta"></a></li>
+          <li><a class="fab fa-spotify" href="#" id="spotify"></a> </li>
+        </ul>
+        {% if user.is_authenticated %}
+        {% else %}
+        <h2><a href="{% url 'login' %}" class='fas fa-sign-in-alt' id="signinin"></a></h2>
+        {% endif %}
+      </div>
     </div>
   <div id="other">
     {% if user.is_authenticated %}

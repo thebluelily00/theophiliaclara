@@ -3,9 +3,11 @@
 h1,h2,h3,h4{
   text-align:center;
 }
+
 html{
   min-height:100%;
 }
+
 body{
   min-height:100vh;
 }
@@ -52,11 +54,6 @@ html, body{
   text-align:left;
 }
 
-#social a{
-  text-decoration:none;
-  color:black;
-}
-
 #menu h2{
   text-align:left;
   text-transform:lowercase;
@@ -67,7 +64,7 @@ html, body{
   transition:0.3s;
 }
 
-#menu h2:hover, #filter li:hover{
+#menu h2:hover, #filter li:hover, #menu h2 a:hover{
   color:#b06ab3;
   cursor:pointer;
 }
@@ -107,191 +104,251 @@ html, body{
   display:block;
 }
 
+@media only screen and (orientation:portrait) {
+  .cont{
+    padding:30px;
+  }
+
+  #menu{
+    background: #DAE2F8;  /* fallback for old browsers */
+background: -webkit-linear-gradient(#D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(#D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height:100vh;
+    position:fixed;
+    width:100vw;
+    color:white;
+  }
+
+  #menu a{
+    color:white;
+    text-decoration: none;
+  }
+}
 /* for desktop */
-@media only screen and (max-width: 600px) {
+@media only screen and (orientation:landscape){
 
-}
-@media only screen and (min-width: 601px){
+  #menu h2 a, #menu a{
+    text-decoration:none;
+    color:black;
+  }
 
-.p{
-  margin:50px;
-  padding:20px 40px 20px 40px;
-  border:0px solid;
-  color:black;
-  border:black solid;
-}
+  .p{
+    margin:50px;
+    padding:20px 40px 20px 40px;
+    border:0px solid;
+    color:black;
+    border:black solid;
+  }
 
-#menu{
-  padding:50px;
-  width:175px;
-  height:100vh;
-  position:fixed;
-  top:0px;
-  /*left:0px;*/
-  font-family:'Abril Fatface';
-  font-weight:normal;
-  text-transform:lowercase;
-  transition:0.5s;
-  transition-timing-function: ease-in-out;
-  background:#ebf0ee;
-}
+  #menu{
+    padding:50px;
+    width:175px;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    /*left:0px;*/
+    font-family:'Abril Fatface';
+    font-weight:normal;
+    text-transform:lowercase;
+    transition:0.5s;
+    transition-timing-function: ease-in-out;
+    background:#ebf0ee;
+  }
 
-#header h1 a{
-  color:black;
-  text-decoration: none;
-}
+  #header h1 a{
+    color:black;
+    text-decoration: none;
+  }
 
-.top li, .footer a{
-  display:inline-block;
-  padding:7px;
-  margin:7px;
-}
+  .top li, .footer a{
+    display:inline-block;
+    padding:7px;
+    margin:7px;
+  }
 
-.top a, .footer a{
-  text-decoration: none;
-  color:white;
-}
+  .top a, .footer a{
+    text-decoration: none;
+    color:white;
+  }
 
-.top, .footer{
-  background:black;
-  color:white;
-  margin-top:0px;
-  text-align:center;
-  font-family:'Poiret One';
-}
+  .top, .footer{
+    background:black;
+    color:white;
+    margin-top:0px;
+    text-align:center;
+    font-family:'Poiret One';
+  }
 
-.top ul{
-  margin:0px;
-  text-align:center;
-  padding:0px;
-}
+  .top ul{
+    margin:0px;
+    text-align:center;
+    padding:0px;
+  }
 
-#login, #login table{
-  margin:auto;
-  text-align:center;
-}
+  #login, #login table{
+    margin:auto;
+    text-align:center;
+  }
 
-#tools a{
-  display: inline-block;
-  padding:5px;
-  margin:5px;
-  text-decoration:none;
-  color:black;
-  text-align:center;
-}
+  #tools a{
+    display: inline-block;
+    padding:5px;
+    margin:5px;
+    text-decoration:none;
+    color:black;
+    text-align:center;
+  }
 
-#tools{
-  text-align:center;
-}
+  #tools{
+    text-align:center;
+  }
 
-#date{
-  text-align:center;
-  padding:4px;
-}
+  #date{
+    text-align:center;
+    padding:4px;
+  }
 
-.postitle{
-  font-family:'Poiret One';
-}
+  .postitle{
+    font-family:'Poiret One';
+  }
 
-.footer{
-  position:relative;
-  bottom:0px;
-  left:0px;
-  width:100%;
-}
+  .footer{
+    position:relative;
+    bottom:0px;
+    left:0px;
+    width:100%;
+  }
 
-.editd{
-  font-family:'Poiret One';
-}
+  .editd{
+    font-family:'Poiret One';
+  }
 
-.save{
-  background:white;
-  border:none;
-  padding:10px;
-  font-family:'Poiret One';
-  margin:auto;
-  text-align:center;
-  font-weight:bold;
-  font-size:14px;
-  transition-duration:0.5s;
-}
+  .save{
+    background:white;
+    border:none;
+    padding:10px;
+    font-family:'Poiret One';
+    margin:auto;
+    text-align:center;
+    font-weight:bold;
+    font-size:14px;
+    transition-duration:0.5s;
+  }
 
-.save:hover{
-  background:#edf3e3;
-}
+  .save:hover{
+    background:#edf3e3;
+  }
 
-.editd input, .editd textarea{
-  border:none;
-  padding:10px;
-  width:50%;
-  margin:auto;
-  font-size: 12px;
-  background:#e9f1dd;
-  font-family:'Poiret One';
+  .editd input, .editd textarea{
+    border:none;
+    padding:10px;
+    width:50%;
+    margin:auto;
+    font-size: 12px;
+    background:#e9f1dd;
+    font-family:'Poiret One';
 
-}
+  }
 
-.editd label{
-  color:#a3a89a;
-}
+  #id_photo{
+    border:none;
+    padding:10px;
+    width:50%;
+    font-size: 12px;
+    background:#e9f1dd;
+    font-family:'Poiret One';
+    margin-left: 32px;
 
-.editd form{
-  margin:auto;
-  text-align:center;
-}
+  }
 
-#login{
-  font-family:'Poiret One';
-}
+  .editd label,.editd p{
+    color:#a3a89a;
+    font-size: 16px;
+  }
 
-#login input, #id-password, #id-username{
-  border:none;
-  padding:5px;
-  background:transparent;
-  color:white;
-}
+  .editd form{
+    margin:auto;
+    text-align:center;
+  }
 
-#cont{
-  margin-top:20px;
-  background:transparent;
-  font-size:14px;
-  color:white;
-  font-family:'Poiret One';
-  transition-duration: 0.5s;
-}
+  #login{
+    font-family:'Poiret One';
+  }
 
-#cont:hover{
-  background:rgba(255,255,255,0.3);
-}
+  #login input, #id-password, #id-username{
+    border:none;
+    padding:5px;
+    background:transparent;
+    color:white;
+  }
 
-#logint{
-  border-spacing:10px;
-}
+  #cont{
+    margin-top:20px;
+    background:transparent;
+    font-size:14px;
+    color:white;
+    font-family:'Poiret One';
+    transition-duration: 0.5s;
+  }
 
-tr td:nth-child(even){
-  border-bottom:1.5px solid white;
-}
+  #cont:hover{
+    background:rgba(255,255,255,0.3);
+  }
 
-#spotify:hover{
-  color:green;
-}
+  #logint{
+    border-spacing:10px;
+  }
 
-#pin:hover{
-  color:red;
-}
+  tr td:nth-child(even){
+    border-bottom:1.5px solid white;
+  }
 
-#insta:hover{
-  color:purple;
-}
+  #spotify:hover{
+    color:green;
+  }
 
-#spotify, #pin, #insta{
-  transition-duration:0.5s;
-}
+  #pin:hover{
+    color:red;
+  }
 
-#signinin{
-  color:black;
-}
+  #insta:hover{
+    color:purple;
+  }
 
-#header h1{
-  font-size:4.2em;
+  #spotify, #pin, #insta{
+    transition-duration:0.5s;
+  }
+
+  #signinin{
+    color:black;
+  }
+
+  #header h1{
+    font-size:4.2em;
+  }
+
+  .about{
+    margin:40px;
+    padding:40px;
+    font-family:'Poiret One';
+    background:rgba(255, 0, 0, 0.01);
+  }
+
+  .about li{
+    line-height: 200%;
+  }
+
+  .about #social a{
+    color:black;
+    text-decoration: none;
+    text-align:center;
+    font-size: 1.5em;
+  }
+
+  .about #social{
+    text-align:center;
+    padding-left:0px;
+
+  }
 }

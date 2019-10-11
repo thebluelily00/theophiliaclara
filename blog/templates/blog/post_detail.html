@@ -6,8 +6,10 @@
 {% block content %}
     <div class="p">
         <h1 class='postitle'>{{ post.title }}</h1>
+        <img src="{{ post.photo }}" style="max-width:100%;">
         <p>{{ post.text|safe }}</p>
-        <a href="/tags/{{ post.tag }}"></a>
+        <br>
+        <p style="text-align:center; text-indent:0px;"><em>See more from <a href="/tag/{{ post.tag }}">{{ post.tag }}</a></em></p>
         {% if post.published_date %}
           <div id="date">
             {{ post.published_date }}

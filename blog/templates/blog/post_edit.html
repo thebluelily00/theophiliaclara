@@ -5,7 +5,7 @@ Edit
 {% block header %}Edit{% endblock %}
 {% block content %}
 <div class="editd">
-<form class="post-form" method="post">{% csrf_token %}
+<form class="post-form" method="post" enctype="multipart/form-data">{% csrf_token %}
   {{ form.as_p }}
   <button type="submit" class="save btn btn-default">Save</button>
 </form>
