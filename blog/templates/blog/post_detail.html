@@ -16,7 +16,7 @@
           </div>
         {% endif %}
         {% if user.is_authenticated %}
-        <div id="tools">
+        <div class="tools">
           {% if post.published_date %}
           <a class='fas fa-check'></a>
           {% else %}
@@ -26,6 +26,29 @@
           <a class="fas fa-trash-alt" href="{% url 'post_remove' pk=post.pk %}"></a>
         </div>
         {% endif %}
+        <hr>
+        <h2><a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></h2>
+        {% for comment in post.comments.all %}
+            {% if user.is_authenticated or comment.approved_comment %}
+            <div class="comment">
+              <hr class="he">
+                <h3><strong>{{ comment.author }}</strong></h3>
+                <h4>{{ comment.created_date }}</h4>
+                <p>{{ comment.text|linebreaks }}</p>
+                    <div class="date">
+                        {% if not comment.approved_comment %}
+                        <div class="tools">
+                          <a href="{% url 'comment_approve' pk=comment.pk %}"><i class="far fa-thumbs-up"></i></a>
+                          <a href="{% url 'comment_remove' pk=comment.pk %}"><i class="far fa-thumbs-down"></i></a>
+                        </div>
+                        {% endif %}
+                    </div>
+              <hr class="he">
+            </div>
+            {% endif %}
+        {% empty %}
+            <p>No comments here yet :(</p>
+        {% endfor %}
     </div>
     <div class="footer">
 

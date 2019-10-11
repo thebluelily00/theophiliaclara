@@ -169,7 +169,6 @@ html, body{
   .p{
     margin:50px;
     padding:20px 40px 20px 40px;
-    border:0px solid;
     color:black;
     border:black solid;
   }
@@ -224,7 +223,7 @@ html, body{
     text-align:center;
   }
 
-  #tools a{
+  .tools a{
     display: inline-block;
     padding:5px;
     margin:5px;
@@ -233,7 +232,7 @@ html, body{
     text-align:center;
   }
 
-  #tools{
+  .tools{
     text-align:center;
   }
 
@@ -383,5 +382,29 @@ html, body{
     text-align:center;
     padding-left:0px;
 
+  }
+
+  hr{
+    border: 1.2px solid black;
+    margin:30px;
+  }
+
+  .comment{
+    padding:0px 15px 10px 15px;
+    margin-bottom:5px;
+  }
+
+  .comment a{
+    display:inline-block;
+    color:black;
+    font-decoration:none;
+    text-align: center;
+    margin:auto;
+  }
+
+  .he{
+    margin-left:45%;
+    margin-right:45%;
+    border:1.4px solid black;
   }
 }
