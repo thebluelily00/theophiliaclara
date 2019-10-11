@@ -6,16 +6,17 @@
 {% block content %}
     <div class="p">
         <h1 class='postitle'>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr|safe }}</p>
+        <p>{{ post.text|safe }}</p>
         <a href="/tags/{{ post.tag }}"></a>
         {% if post.published_date %}
           <div id="date">
-        {{ post.published_date }}
+            {{ post.published_date }}
           </div>
         {% endif %}
         {% if user.is_authenticated %}
         <div id="tools">
           {% if post.published_date %}
+          <a class='fas fa-check'></a>
           {% else %}
           <a class="fas fa-upload" href="{% url 'post_publish' pk=post.pk %}"></a>
           {% endif %}
