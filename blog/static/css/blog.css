@@ -104,25 +104,58 @@ html, body{
   display:block;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (orientation:portrait) and (max-width:600px){
   .cont{
     padding:30px;
   }
 
   #menu{
-    background: #DAE2F8;  /* fallback for old browsers */
-background: -webkit-linear-gradient(#D6A4A4, #DAE2F8);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(#D6A4A4, #DAE2F8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #1D2B64;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(-45deg, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height:100vh;
     position:fixed;
     width:100vw;
     color:white;
+    left: 0px;
+    top:0px;
   }
 
   #menu a{
     color:white;
     text-decoration: none;
+  }
+
+  #header{
+    font-size: 3em;
+  }
+}
+
+@media only screen and (orientation:portrait) and (min-width:601px){
+  .cont{
+    padding:50px;
+  }
+
+  #menu{
+    background: #1D2B64;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(-45deg, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height:100vh;
+    position:fixed;
+    width:100vw;
+    color:white;
+    left: 0px;
+    top:0px;
+    font-size: 2em;
+  }
+
+  #menu a{
+    color:white;
+    text-decoration: none;
+  }
+
+  #header{
+    font-size: 4em;
   }
 }
 /* for desktop */
