@@ -6,15 +6,16 @@
 {% block content %}
     <div class="p">
         <h1 class='postitle'>{{ post.title }}</h1>
-        <img src="{{ post.photo }}" style="max-width:100%;">
-        <p>{{ post.text|safe }}</p>
-        <br>
-        <p style="text-align:center; text-indent:0px;"><em>See more from <a href="/tag/{{ post.tag }}">{{ post.tag }}</a></em></p>
         {% if post.published_date %}
           <div id="date">
-            {{ post.published_date }}
+            <h2>{{ post.published_date }}</h2>
           </div>
         {% endif %}
+        {% load static %}
+        <img src="/media/{{post.photo}}" style="max-width:100%;" class="litness">
+        {{ post.text|safe }}
+        <br>
+        <p style="text-align:center; text-indent:0px;"><em>See more from <a href="/tag/{{ post.tag }}">{{ post.tag }}</a></em></p>
         {% if user.is_authenticated %}
         <div class="tools">
           {% if post.published_date %}
@@ -27,11 +28,10 @@
         </div>
         {% endif %}
         <hr>
-        <h2><a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></h2>
+        <h2 id="commentt"><a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></h2>
         {% for comment in post.comments.all %}
             {% if user.is_authenticated or comment.approved_comment %}
             <div class="comment">
-              <hr class="he">
                 <h3><strong>{{ comment.author }}</strong></h3>
                 <h4>{{ comment.created_date }}</h4>
                 <p>{{ comment.text|linebreaks }}</p>
@@ -43,7 +43,6 @@
                         </div>
                         {% endif %}
                     </div>
-              <hr class="he">
             </div>
             {% endif %}
         {% empty %}

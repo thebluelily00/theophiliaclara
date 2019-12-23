@@ -1,410 +1,209 @@
-@import url('https://fonts.googleapis.com/css?family=Codystar|Great+Vibes|Poiret+One&display=swap');
+@import url("https://use.typekit.net/jcy0yuf.css");
 
-h1,h2,h3,h4{
-  text-align:center;
-}
-
-html{
-  min-height:100%;
-}
-
-body{
-  min-height:100vh;
-}
-
-h1{
-  font-family:'Codystar';
-}
-
-.p, .tag{
-  font-family:'Poiret One';
-}
-
-p{
- line-height:200%;
- text-indent:64px;
-}
-
-html, body{
-  margin:0px;
+body, html{
   padding:0px;
+  margin:0px;
+  font-family: playfair-display;
 }
 
-#filter li{
-  list-style-type:none;
-  padding-bottom:10px;
-  transition-duration: 2000ms;
-  transition-property: text-decoration;
+a{
+  color:#CDAAAE;
+  text-decoration: none;
 }
 
-#filter li:hover{
-  text-decoration:underline;
-}
-
-#social li{
-  display:inline-block;
-  padding:10px;
-  margin:auto;
-  text-indent:0px;
+#menu{
+  background-color: #F5F4F4;
+  color:#B17A80;
+  padding:5px;
   text-align:center;
 }
 
-#social{
-  margin:auto;
-  text-align:left;
+#menu a{
+  color:#B17A80;
+  font-size: 1.2em;
 }
 
-#menu h2{
-  text-align:left;
-  text-transform:lowercase;
-  font-family:'Great vibes';
-}
-
-#menu li{
-  transition:0.3s;
-}
-
-#menu h2:hover, #filter li:hover, #menu h2 a:hover{
-  color:#b06ab3;
-  cursor:pointer;
-}
-
-#other{
-  transition-duration:0.5s;
-  transition-timing-function: ease-in-out;
-}
-
-#open-m{
-  font-size:2em;
-  margin:10px auto 10px auto;
-  width:100%;
-  text-align:center;
-  display:block;
-  margin-top:40px;
+#menu h3, #menu span, #menu ul, #menu li{
+  display: inline-block;
+  padding-left:10px;
+  padding-right:10px;
+  font-weight:normal;
+  vertical-align: center;
+  text-transform: lowercase;
 }
 
 #close-m{
-  font-size:1.5em;
-  display:block;
-  text-align:center;
+  display: block;
+  text-align: center;
+  font-size: 2em;
 }
 
-#open-m:hover, #close-m:hover, #filter li:hover, #social li:hover{
-  cursor:pointer;
+h1{
+  font-family: luxus-brut;
+  text-align: center;
 }
 
-#footer{
-  text-align:center;
-  padding:20px;
-  margin:0px;
-  color:black;
+#theone{
+  font-size: 4em;
+  margin-bottom:0px;
 }
 
-#footer span{
-  display:block;
+.col1, .col2, .col3{
+  display: inline-block;
+  width:240px;
+  vertical-align: top;
+  text-align: left;
+  padding:10px;
 }
 
-@media only screen and (orientation:portrait) and (max-width:600px){
-  .cont{
-    padding:30px;
-  }
-
-  #menu{
-    background: #1D2B64;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(-45deg, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(-45deg, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height:100vh;
-    position:fixed;
-    width:100vw;
-    color:white;
-    left: 0px;
-    top:0px;
-  }
-
-  #menu a{
-    color:white;
-    text-decoration: none;
-  }
-
-  #header{
-    font-size: 3em;
-  }
+.footer{
+  background-color:#D9B8B8;
+  color:white;
+  text-align: center;
 }
 
-@media only screen and (orientation:portrait) and (min-width:601px){
-  .cont{
-    padding:50px;
-  }
-
-  #menu{
-    background: #1D2B64;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(-45deg, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(-45deg, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height:100vh;
-    position:fixed;
-    width:100vw;
-    color:white;
-    left: 0px;
-    top:0px;
-    font-size: 2em;
-  }
-
-  #menu a{
-    color:white;
-    text-decoration: none;
-  }
-
-  #header{
-    font-size: 4em;
-  }
+.footer a{
+  color:white;
 }
-/* for desktop */
-@media only screen and (orientation:landscape){
 
-  #menu h2 a, #menu a{
-    text-decoration:none;
-    color:black;
-  }
+.footer h2{
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+}
 
-  .p{
-    margin:50px;
-    padding:20px 40px 20px 40px;
-    color:black;
-    border:black solid;
-  }
+.social li{
+  display: inline-block;
+  padding:10px;
+  font-size: 1.2em;
+}
 
-  #menu{
-    padding:50px;
-    width:175px;
-    height:100vh;
-    position:fixed;
-    top:0px;
-    /*left:0px;*/
-    font-family:'Abril Fatface';
-    font-weight:normal;
-    text-transform:lowercase;
-    transition:0.5s;
-    transition-timing-function: ease-in-out;
-    background:#ebf0ee;
-  }
+.social{
+  padding:0px;
+  text-align: center;
+}
 
-  #header h1 a{
-    color:black;
-    text-decoration: none;
-  }
+.copy{
+  display: block;
+  text-align: center;
+}
 
-  .top li, .footer a{
-    display:inline-block;
-    padding:7px;
-    margin:7px;
-  }
+.tag{
+  list-style-type: '☆  ';
+  display: inline;
+  list-style-position: inside;
+  line-height: 200%;
+}
 
-  .top a, .footer a{
-    text-decoration: none;
-    color:white;
-  }
+#filter{
+  height:100px;
+  overflow: scroll;
+  padding:0px;
+}
 
-  .top, .footer{
-    background:black;
-    color:white;
-    margin-top:0px;
-    text-align:center;
-    font-family:'Poiret One';
-  }
+.top li{
+  display: inline-block;
+}
 
-  .top ul{
+.top ul{
+  padding:0px;
     margin:0px;
-    text-align:center;
-    padding:0px;
-  }
+}
 
-  #login, #login table{
-    margin:auto;
-    text-align:center;
-  }
+.top{
+  text-align: center;
+  padding:10px;
+  background:black;
+}
 
-  .tools a{
-    display: inline-block;
-    padding:5px;
-    margin:5px;
-    text-decoration:none;
-    color:black;
-    text-align:center;
-  }
+.top a{
+  color:white;
+  padding:5px;
+  margin:5px;
+}
 
-  .tools{
-    text-align:center;
-  }
+.p{
+  padding:20px;
+  margin:40px;
+  background-color: #EFE8E8;
+}
 
-  #date{
-    text-align:center;
-    padding:4px;
-  }
+.p h3, .p h4{
+  text-align:center;
+  color:#B17A80;
+}
 
-  .postitle{
-    font-family:'Poiret One';
-  }
+#logint{
+  margin:auto;
+}
 
-  .footer{
-    position:relative;
-    bottom:0px;
-    left:0px;
-    width:100%;
-  }
+#cont{
+  text-align: center;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+  margin-bottom:20px;
+}
 
-  .editd{
-    font-family:'Poiret One';
-  }
+.post-form{
+  text-align: center;
+}
 
-  .save{
-    background:white;
-    border:none;
+.post-form label{
+  display: none;
+}
+
+.post-form input, .post-form textarea{
+    width:500px;
     padding:10px;
-    font-family:'Poiret One';
-    margin:auto;
-    text-align:center;
-    font-weight:bold;
-    font-size:14px;
-    transition-duration:0.5s;
-  }
-
-  .save:hover{
-    background:#edf3e3;
-  }
-
-  .editd input, .editd textarea{
+    line-height: 150%;
+    font-family: sans-serif;
     border:none;
-    padding:10px;
-    width:50%;
-    margin:auto;
-    font-size: 12px;
-    background:#e9f1dd;
-    font-family:'Poiret One';
+    background-color: #F5F4F4;
+}
 
-  }
 
-  #id_photo{
-    border:none;
-    padding:10px;
-    width:50%;
-    font-size: 12px;
-    background:#e9f1dd;
-    font-family:'Poiret One';
-    margin-left: 32px;
+.save{
+  margin-bottom:20px;
+}
 
-  }
+#id_photo{
+  text-align: center;
+}
 
-  .editd label,.editd p{
-    color:#a3a89a;
-    font-size: 16px;
-  }
+#id_text{
+  resize: none;
+}
 
-  .editd form{
-    margin:auto;
-    text-align:center;
-  }
+.tools{
+  text-align: center;
+}
 
-  #login{
-    font-family:'Poiret One';
-  }
+.tools a{
+  display: inline-block;
+  padding:5px;
+  margin:5px;
+}
 
-  #login input, #id-password, #id-username{
-    border:none;
-    padding:5px;
-    background:transparent;
-    color:white;
-  }
+hr{
+  border:2px solid white;
+}
 
-  #cont{
-    margin-top:20px;
-    background:transparent;
-    font-size:14px;
-    color:white;
-    font-family:'Poiret One';
-    transition-duration: 0.5s;
-  }
+.p p{
+  line-height: 200%;
+  text-indent: 45px;
+  padding:10px;
+}
 
-  #cont:hover{
-    background:rgba(255,255,255,0.3);
-  }
+#date h2{
+  text-align:center;
+}
 
-  #logint{
-    border-spacing:10px;
-  }
+.comment{
+  border-left:3px solid white;
+}
 
-  tr td:nth-child(even){
-    border-bottom:1.5px solid white;
-  }
-
-  #spotify:hover{
-    color:green;
-  }
-
-  #pin:hover{
-    color:red;
-  }
-
-  #insta:hover{
-    color:purple;
-  }
-
-  #spotify, #pin, #insta{
-    transition-duration:0.5s;
-  }
-
-  #signinin{
-    color:black;
-  }
-
-  #header h1{
-    font-size:4.2em;
-  }
-
-  .about{
-    margin:40px;
-    padding:40px;
-    font-family:'Poiret One';
-    background:rgba(255, 0, 0, 0.01);
-  }
-
-  .about li{
-    line-height: 200%;
-  }
-
-  .about #social a{
-    color:black;
-    text-decoration: none;
-    text-align:center;
-    font-size: 1.5em;
-  }
-
-  .about #social{
-    text-align:center;
-    padding-left:0px;
-
-  }
-
-  hr{
-    border: 1.2px solid black;
-    margin:30px;
-  }
-
-  .comment{
-    padding:0px 15px 10px 15px;
-    margin-bottom:5px;
-  }
-
-  .comment a{
-    display:inline-block;
-    color:black;
-    font-decoration:none;
-    text-align: center;
-    margin:auto;
-  }
-
-  .he{
-    margin-left:45%;
-    margin-right:45%;
-    border:1.4px solid black;
-  }
+#commentt{
+  text-align: center;
 }

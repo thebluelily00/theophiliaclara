@@ -15,32 +15,8 @@
     <script src="{% static 'js/scripts.js' %}"></script>
   </head>
   <body>
-    <div id="menu">
-      <div class="cont">
-        <i class="fas fa-times" id="close-m"></i>
-        <h2><a href="/">HOME</a></h2>
-        <h2><a href="{% url 'about' %}">ABOUT</a></h2>
-        <h2>FILTER</h2>
-        <ul id="filter">
-          {% for post in posts %}
-            <li class='tag'><a href="{% url 'tags' tag=post.tag %}">{{ post.tag }}</a></li>
-          {% endfor %}
-        </ul>
-        <h2>FOLLOW ON</h2>
-        <ul id="social">
-          <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
-          <li><a class="fab fa-instagram" href="https://www.instagram.com/theophiliaclara/" target="blank" id="insta"></a></li>
-          <li><a class="fab fa-spotify" href="#" id="spotify"></a> </li>
-        </ul>
-        {% if user.is_authenticated %}
-        {% else %}
-        <h2><a href="{% url 'login' %}" class='fas fa-sign-in-alt' id="signinin"></a></h2>
-        {% endif %}
-      </div>
-    </div>
-  <div id="other">
-    {% if user.is_authenticated %}
-      <div class="top">
+    {% if user.is_authenticated %} <!-- add, drafts, log out bar -->
+  <div class="top">
     <ul>
       <li><a href="{% url 'post_new' %}" class='fas fa-plus'></a></li>
       <li><a href="{% url 'post_draft_list' %}" class='fas fa-th-list'></a></li>
@@ -48,12 +24,49 @@
     </ul>
   </div>
     {% endif %}
-    <div id="header">
-      <h1>{% block header %}{% endblock %}</h1>
+  <div id="menu"> <!-- home, about, social media buttons -->
+      <div class="cont">
+          <h3><a href="/">Home</a></h3>
+          <ul class="tsocial">
+            <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
+            <li><a class="fab fa-instagram" href="https://www.instagram.com/theophiliaclara/" target="blank" id="insta"></a></li>
+            <li><a class="fab fa-spotify" href="#" id="spotify"></a> </li>
+          </ul>
+          <h3><a href="{% url 'about' %}">About</a></h3>
+      </div>
     </div>
-    <i class="fas fa-bars" id="open-m"></i>
-    {% block content %}
+  <div id="other"> <!-- not menus -->
+    <div id="header">
+    <h1 id="theone">{% block header %}{% endblock %}</h1>
+  </div>
+    {% block content %} <!-- unique content for each page -->
     {% endblock %}
+    <div class="footer"> <!-- 3 sections with links -->
+      <div class="col1"> <!-- filter -->
+        <h2 class='ex'>Filter</h2>
+        <ul id="filter">
+          {% for post in posts %}
+            <li class='tag'><a href="{% url 'tags' tag=post.tag %}">{{ post.tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col2"> <!-- social media -->
+          <h2 class='ex'>Follow on:</h2>
+          <ul class="social">
+            <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
+            <li><a class="fab fa-instagram" href="https://www.instagram.com/theophiliaclara/" target="blank" id="insta"></a></li>
+            <li><a class="fab fa-spotify" href="#" id="spotify"></a> </li>
+          </ul>
+      </div>
+      <div class="col3"> <!-- extra info -->
+        <h2><a href="{% url 'about' %}">About</a></h2>
+        <span class='copy'></span>
+          {% if user.is_authenticated %}
+          {% else %}
+          <h2><a href="{% url 'login' %}" class='fas fa-sign-in-alt' id="signinin"></a></h2>
+          {% endif %}
+      </div>
+    </div>
   </div>
   </body>
 </html>

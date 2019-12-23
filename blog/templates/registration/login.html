@@ -1,28 +1,4 @@
 {% extends 'blog/base.html' %}
-{% block css %}
-  #open-m{
-    display:none;
-  }
-  html{
-    background: #00467F;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    background-repeat:no-repeat;
-    background-cover:cover;
-    background-position:center;
-    height:100vh;
-    width:100vw;
-  }
-  body{
-    background:;
-    width:25%;
-    margin:10% auto 0px auto;
-    padding:10px 10px 40px 10px;
-    color:white;
-  }
-
-{% endblock %}
 {% block title %}
 Login
 {% endblock %}
@@ -37,7 +13,7 @@ Sign In
 
       <form method="post" action="{% url 'login' %}"  id="login">
       {% csrf_token %}
-          <table id="logint">
+          <table id="logint" cellpadding="5px">
           <tr>
               <td>{{ form.username.label_tag }}</td>
               <td>{{ form.username }}</td>

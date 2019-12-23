@@ -4,33 +4,16 @@ Home
 {% endblock %}
 {% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
 {% block css %}
-
-#header h1{
-  margin-top:0px;
-  padding:20px;
-  background:white;
-}
-#header{
-  height:100vh;
-  background: url(/static/images/central.png);
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-}
-
 {% endblock %}
     {% load static %}
 {% block content %}
 <div id="posts">
   {% for post in posts %}
 <div class="p {{ post.tag }}">
-  <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
-    <h4>{{ post.published_date }}</h4>
+  <h1 class="pt"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    <h3>{{ post.published_date }}</h3>
     <h4>{{ post.approved_comments|length }} comments</h4>
 </div>
 {% endfor %}
-</div>
-<div class="footer">
-
 </div>
 {% endblock %}

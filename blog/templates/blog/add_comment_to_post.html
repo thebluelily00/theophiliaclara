@@ -2,8 +2,10 @@
 {% block title %}Write comment{% endblock %}
 {% block header %}New comment{% endblock %}
 {% block content %}
+<div class="editd">
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Send</button>
     </form>
+</div>
 {% endblock %}
