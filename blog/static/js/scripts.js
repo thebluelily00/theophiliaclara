@@ -28,6 +28,23 @@ $( document ).ready(function() {
   var d = new Date();
   $('.copy').html('<a>&copy '+d.getFullYear()+" Theophilia Clara</a>");
 
+  if(screen.width>screen.height){ // for landscape
+    if($('.litness').width > $('.litness').height){ // when photo is horizontal
+      $('.litness').css('max-width','400px');
+    }
+    else{ // when photo is vertical
+      $('.litness').css('width','30%');
+    }
+  }
+  else{ //for portrait
+    if($('.litness').width > $('.litness').height){ // when photo is horizontal
+      //nada
+    }
+    else{ // when photo is vertical
+      //nada
+    }
+  } //nothing really necessary
+
   $("#id_title").attr('placeholder','Title');
   $("#id_text").attr('placeholder','Text');
   $("#id_tag").attr('placeholder','Tag');
