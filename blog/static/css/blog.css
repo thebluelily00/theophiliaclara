@@ -284,14 +284,17 @@ p{
 
 @media only screen and (orientation:portrait){
   .post-form input, .post-form textarea{
-    width:75%;
+    width:75vw;
   }
   .post-form{
     text-align: left;
   }
 
   .save{
-    margin:auto;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
     text-align:center;
   }
 
