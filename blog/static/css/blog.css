@@ -11,6 +11,20 @@ a{
   text-decoration: none;
 }
 
+#contrast{
+  background:#CDAAAE;
+  color:white;
+  border-radius: 100%;
+  width:175px;
+  height:175px;
+  padding-top:45px;
+  padding-left:20px;
+  padding-right:20px;
+  margin:auto;
+}
+
+#contrast a{color:white;}
+
 #menu{
   background-color: #F5F4F4;
   color:#B17A80;
@@ -45,8 +59,6 @@ h1{
 
 #theone{
   font-size: 4em;
-  line-height: 100%;
-  margin-top:50px;
 }
 
 .col1, .col2, .col3{
@@ -157,7 +169,7 @@ h1{
 }
 
 .post-form input, .post-form textarea{
-    width:500px;
+    width:50%;
     padding:10px;
     line-height: 150%;
     font-family: sans-serif;
@@ -190,6 +202,7 @@ h1{
 
 hr{
   border:2px solid white;
+  margin:30px;
 }
 
 .p p{
@@ -206,7 +219,8 @@ p{
 }
 
 .comment{
-  border-left:3px solid white;
+  border:3px solid white;
+  margin-bottom:10px;
 }
 
 #commentt{
@@ -217,4 +231,30 @@ p{
   font-size: 3em;
   margin-bottom:0px;
   line-height: 100%;
+}
+
+.super-responsive-wrapper {
+  width: 100%;
+  margin: auto;
+  margin-bottom:20px;
+}
+
+.board-wrapper {
+  margin: auto;
+  text-align: center;
+}
+
+.board-wrapper span {
+  overflow: hidden;
+  max-width: 100%!important;
+}
+
+.litness img{
+  text-align: center;
+  margin:auto;
+}
+
+
+.centt{
+  text-align: center;
 }
