@@ -20,7 +20,9 @@ a{
   padding-top:45px;
   padding-left:20px;
   padding-right:20px;
-  margin:auto;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:20px;
 }
 
 #contrast a{color:white;}
@@ -234,7 +236,7 @@ p{
 }
 
 .super-responsive-wrapper {
-  width: 100%;
+  width: 90%;
   margin: auto;
   margin-bottom:20px;
 }
