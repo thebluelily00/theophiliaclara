@@ -141,6 +141,10 @@ h1{
 .p{
   padding:20px;
   margin:40px;
+  border:3px solid #EFE8E8;
+}
+
+.p:nth-child(1){
   background-color: #EFE8E8;
 }
 
@@ -178,7 +182,6 @@ h1{
     border:none;
     background-color: #F5F4F4;
 }
-
 
 .save{
   margin-bottom:20px;
@@ -236,7 +239,7 @@ p{
 }
 
 .super-responsive-wrapper {
-  width: 90%;
+  width: 100%;
   margin: auto;
   margin-bottom:30px;
 }
@@ -244,11 +247,13 @@ p{
 .board-wrapper {
   margin: auto;
   text-align: center;
+  vertical-align: center;
 }
 
 .board-wrapper span {
   overflow: hidden;
   max-width: 100%!important;
+  vertical-align: center;
 }
 
 .litness img{
@@ -256,7 +261,35 @@ p{
   margin:auto;
 }
 
-
 .centt{
   text-align: center;
+}
+
+.qu{
+  width:310px;
+  height:310px;
+  display: inline-block;
+  vertical-align: top;
+  padding:20px;
+  background:linear-gradient(#F5F4F4, white);
+  line-height: 200%;
+  font-size: 1.15em;
+}
+
+@media only screen and (orientation:portrait){
+  .post-form input, .post-form textarea{
+    width:75%;
+  }
+  .post-form{
+    text-align: left;
+  }
+
+  .save{
+    margin:auto;
+    text-align:center;
+  }
+
+  .super-responsive-wrapper{
+    width:350px;
+  }
 }
