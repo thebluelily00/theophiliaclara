@@ -1,4 +1,16 @@
 {% extends 'blog/base.html' %}
+{% block css %}
+.d{
+  margin:40px;
+  padding:30px;
+  border:3px solid;
+  text-align:center;
+}
+
+.d p{
+  text-indent:0px;
+}
+{% endblock %}
 {% block title %}
 Drafts
 {% endblock %}
@@ -8,9 +20,8 @@ Drafts
 {% block content %}
 <h2 style="font-family:'Poiret One'; margin:30px; text-align:center;">Drafts: {{ posts|length }}</h2>
 {% for post in posts %}
-<div class="p">
+<div class="d">
   <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-  <p>{{ post.text|truncatechars:200 }}</p>
   <p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
 </div>
 {% endfor %}
