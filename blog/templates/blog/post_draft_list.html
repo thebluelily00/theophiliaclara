@@ -6,7 +6,7 @@ Drafts
 Drafts
 {% endblock %}
 {% block content %}
-<h2 style="font-family:'Poiret One'; margin:30px;">Drafts: {{ posts|length }}</h2>
+<h2 style="font-family:'Poiret One'; margin:30px; text-align:center;">Drafts: {{ posts|length }}</h2>
 {% for post in posts %}
 <div class="p">
   <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>

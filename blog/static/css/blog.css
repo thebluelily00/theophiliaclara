@@ -45,7 +45,8 @@ h1{
 
 #theone{
   font-size: 4em;
-  margin-bottom:0px;
+  line-height: 100%;
+  margin-top:50px;
 }
 
 .col1, .col2, .col3{
@@ -96,9 +97,10 @@ h1{
 }
 
 #filter{
-  height:100px;
+  max-height:60px;
   overflow: scroll;
   padding:0px;
+  text-align: center;
 }
 
 .top li{
@@ -191,9 +193,12 @@ hr{
 }
 
 .p p{
+  padding:10px;
+}
+
+p{
   line-height: 200%;
   text-indent: 45px;
-  padding:10px;
 }
 
 #date h2{
@@ -206,4 +211,10 @@ hr{
 
 #commentt{
   text-align: center;
+}
+
+.postitle{
+  font-size: 3em;
+  margin-bottom:0px;
+  line-height: 100%;
 }
