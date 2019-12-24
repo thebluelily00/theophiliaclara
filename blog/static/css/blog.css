@@ -303,3 +303,13 @@ p{
     width:350px;
   }
 }
+
+@media print{
+  .top, #menu, .footer, .tools, .com, .taglink{
+    display: none;
+  }
+
+  .p{
+    width:95%;
+  }
+}

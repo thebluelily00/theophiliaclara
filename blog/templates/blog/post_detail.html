@@ -17,7 +17,7 @@
         </div>
         {{ post.text|safe }}
         <br>
-        <p style="text-align:center; text-indent:0px;"><em>See more from <a href="/tag/{{ post.tag }}">{{ post.tag }}</a></em></p>
+        <p style="text-align:center; text-indent:0px;" class="taglink"><em class="taglink">See more from <a href="/tag/{{ post.tag }}" class="taglink">{{ post.tag }}</a></em></p>
         {% if user.is_authenticated %}
         <div class="tools">
           {% if post.published_date %}
@@ -30,26 +30,28 @@
         </div>
         {% endif %}
         <hr>
-        <h2 id="commentt"><a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></h2>
-        {% for comment in post.comments.all %}
-            {% if user.is_authenticated or comment.approved_comment %}
-            <div class="comment">
-                <h3><strong>{{ comment.author }}</strong></h3>
-                <h4>{{ comment.created_date }}</h4>
-                {{ comment.text|linebreaks }}
-                    <div class="date">
-                        {% if not comment.approved_comment %}
-                        <div class="tools">
-                          <a href="{% url 'comment_approve' pk=comment.pk %}"><i class="far fa-thumbs-up"></i></a>
-                          <a href="{% url 'comment_remove' pk=comment.pk %}"><i class="far fa-thumbs-down"></i></a>
-                        </div>
-                        {% endif %}
-                    </div>
-            </div>
-            {% endif %}
-        {% empty %}
-            <p>No comments here yet :(</p>
-        {% endfor %}
+        <div class="com">
+          <h2 id="commentt"><a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></h2>
+          {% for comment in post.comments.all %}
+              {% if user.is_authenticated or comment.approved_comment %}
+              <div class="comment">
+                  <h3><strong>{{ comment.author }}</strong></h3>
+                  <h4>{{ comment.created_date }}</h4>
+                  {{ comment.text|linebreaks }}
+                      <div class="date">
+                          {% if not comment.approved_comment %}
+                          <div class="tools">
+                            <a href="{% url 'comment_approve' pk=comment.pk %}"><i class="far fa-thumbs-up"></i></a>
+                            <a href="{% url 'comment_remove' pk=comment.pk %}"><i class="far fa-thumbs-down"></i></a>
+                          </div>
+                          {% endif %}
+                      </div>
+              </div>
+              {% endif %}
+          {% empty %}
+              <p>No comments here yet :(</p>
+          {% endfor %}
+        </div>
     </div>
     <div class="footer">
 
