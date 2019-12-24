@@ -61,6 +61,7 @@ h1{
 
 #theone{
   font-size: 4em;
+  height:60px;
 }
 
 .col1, .col2, .col3{
@@ -144,7 +145,7 @@ h1{
   border:3px solid #EFE8E8;
 }
 
-.p:nth-child(1){
+.p:first-child{
   background-color: #EFE8E8;
 }
 

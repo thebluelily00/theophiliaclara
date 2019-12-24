@@ -46,8 +46,8 @@
       <div class="col1"> <!-- filter -->
         <h2 class='ex'>Filter</h2>
         <ul id="filter">
-          {% for post in posts %}
-            <li class='tag'><a href="{% url 'tags' tag=post.tag %}">{{ post.tag }}</a></li>
+          {% for tag in tags %}
+            <li class='tag'><a href="{% url 'tags' tag=tag %}">{{ tag }}</a></li>
           {% endfor %}
         </ul>
       </div>

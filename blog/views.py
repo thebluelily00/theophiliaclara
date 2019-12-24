@@ -8,18 +8,21 @@ from django.contrib.auth.decorators import login_required
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'blog/post_list.html', {'posts':posts})
+    tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()
+    return render(request, 'blog/post_list.html', {'posts':posts, 'tags':tags})
 
 def about(request):
     return render(request, 'blog/about.html')
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()
+    return render(request, 'blog/post_detail.html', {'post': post, 'tags':tags})
 
 def tags(request, tag):
     posts = Post.objects.filter(tag=tag).order_by('published_date')
-    return render(request, 'blog/tags.html', {'posts':posts})
+    tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()
+    return render(request, 'blog/tags.html', {'posts':posts, 'tags':tags, 'tag':tag})
 
 @login_required
 def post_new(request):

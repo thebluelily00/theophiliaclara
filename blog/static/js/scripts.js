@@ -47,12 +47,8 @@ $( document ).ready(function() {
 
   $("#id_title").attr('placeholder','Title');
   $("#id_text").attr('placeholder','Text');
+  $("#id_text").attr('autocorrect','onn');
   $("#id_tag").attr('placeholder','Tag');
   $("#id_author").attr('placeholder','Author name');
 
-  $(function() {
-    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    $("html, body").css({"width":w,"height":h});
-});
 });
