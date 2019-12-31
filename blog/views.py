@@ -17,7 +17,7 @@ def about(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()
-    return render(request, 'blog/post_detail.html', {'post': post, 'tags':tags})
+    return render(request, 'blog/post_detail.html', {'post': post,'tags':tags})
 
 def tags(request, tag):
     posts = Post.objects.filter(tag=tag).order_by('published_date')
@@ -68,7 +68,6 @@ def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
-
 
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)

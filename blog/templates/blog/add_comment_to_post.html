@@ -4,7 +4,7 @@
 {% block content %}
 <div class="editd">
     <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
+        {{ form }}
         <button type="submit" class="save btn btn-default">Send</button>
     </form>
 </div>

@@ -3,6 +3,50 @@
 .footer{
   display:none;
 }
+
+.post-form{
+  text-align:center;
+}
+
+.text-options i{
+  display:block;
+  padding:8px;
+  margin:5px;
+}
+
+.text-options li{
+  list-style-type:none;
+  text-indent:0px;
+  margin:0px;
+  padding:0px;
+  display:inline-block;
+}
+
+.text-options ul{
+  margin:0px;
+  padding:0px;
+}
+
+.text-options{
+  text-align:center;
+}
+
+#menu{
+  display:none;
+}
+
+.imagess{
+  text-align:center;
+}
+
+.imagess input{
+  width:73px;
+  text-align:center;
+  padding-top:36.5px;
+  padding-bottom:36.5px;
+  border-radius:100%;
+}
+
 {% endblock %}
 {% block title %}
 Edit
@@ -10,8 +54,15 @@ Edit
 {% block header %}Edit{% endblock %}
 {% block content %}
 <div class="editd">
-<form class="post-form" method="post" enctype="multipart/form-data">{% csrf_token %}
+<form class="post-form" method="post" enctype="multipart/form-data" id="posty">
+  {% csrf_token %}
   {{ form.as_p }}
+  {{ formset.management_form }}
+  <div class="imagess">
+    {% for form in formset %}
+        {{ form }}
+    {% endfor %}
+  </div>
   <button type="submit" class="save btn btn-default">Save</button>
 </form>
 </div>

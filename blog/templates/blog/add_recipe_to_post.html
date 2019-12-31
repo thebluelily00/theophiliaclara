@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block css %}
+.footer{
+  display:none;
+}
+
+#newrec{
+  padding:20px;
+  margin:20px;
+  text-align:left;
+}
+
+{% endblock %}
+{% block title %}
+New Recipe
+{% endblock %}
+{% block header %}New Recipe{% endblock %}
+{% block content %}
+<form class="recipe-form" method="post" id="newrec" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-default">Save</button>
+</form>
+</div>
+{% endblock %}
