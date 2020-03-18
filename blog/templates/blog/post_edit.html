@@ -58,11 +58,6 @@ Edit
   {% csrf_token %}
   {{ form.as_p }}
   {{ formset.management_form }}
-  <div class="imagess">
-    {% for form in formset %}
-        {{ form }}
-    {% endfor %}
-  </div>
   <button type="submit" class="save btn btn-default">Save</button>
 </form>
 </div>

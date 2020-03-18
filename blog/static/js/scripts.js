@@ -1,30 +1,7 @@
-$( document ).ready(function() {
+[$( document ).ready(function() {
   console.log( 'ready!' );
-  /*if(screen.width>601){
-    $( "#menu " ).css('left','-300px');
-    $( "#other" ).css('margin-left','0px');
-    $( "#open-m").on('click', function(){
-      $('#menu').show();
-      $('#menu').css('left','0px');
-      $('#other').css('margin-left','300px');
-    });
-    $('#close-m').on('click', function(){
-    $('#other').css('margin-left','0px');
-      $('#menu').css('left','-300px');
-      $('#menu').hide();
-    });
-  }
-  else{
-    $("#menu").hide();
-    $( "#open-m").on('click', function(){
-      $('#menu').slideDown();
-      $('#other').slideUp();
-    });
-    $('#close-m').on('click', function(){
-      $('#menu').slideUp();
-      $('#other').slideDown();
-    });
-  }*/
+  $('#sty, #lif, #ent, #foo').hide();
+
   var d = new Date();
   $('.copy').html('<a>&copy '+d.getFullYear()+" Theophilia Clara</a>");
 
@@ -47,7 +24,7 @@ $( document ).ready(function() {
 
   $("#id_title").attr('placeholder','Title');
   $("#id_text").attr('placeholder','Text');
-  $("#id_text").attr('autocorrect','onn');
+  $("#id_text").attr('autocorrect','on');
   $("#id_tag").attr('placeholder','Tag');
   $("#id_author").attr('placeholder','Author name');
   $("#posty p:nth-child(3)").append("\
@@ -127,4 +104,43 @@ $( document ).ready(function() {
 </div>\n\
 ');
   });
+
+
+  $('#c-sty').mouseenter(function(){
+    $("#sty").fadeIn();
+  });
+
+  $('#c-sty').mouseleave(function(){
+    $("#sty").fadeOut();
+  });
+
+  $('#c-lif').mouseenter(function(){
+    $("#lif").fadeIn();
+  });
+
+  $('#c-lif').mouseleave(function(){
+    $("#lif").fadeOut();
+  });
+  $('#c-ent').mouseenter(function(){
+    $("#ent").fadeIn();
+  });
+
+  $('#c-ent').mouseleave(function(){
+    $("#ent").fadeOut();
+  });
+  $('#c-foo').mouseenter(function(){
+    $("#foo").fadeIn();
+  });
+
+  $('#c-foo').mouseleave(function(){
+    $("#foo").fadeOut();
+  });
+
+  //var cats = {
+  //    'style':['clothes','hair','nails','accessories'],
+  //    'life':['routines','advice','organization','wallpapers'],
+  //    'entertainment':['music','tv','books','movies'],
+  //    'food':['breakfast','mealprep','snacks','desserts'],
+//  }
+//  $("#id_cat2").attr('type','');
 });

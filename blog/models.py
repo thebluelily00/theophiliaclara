@@ -3,11 +3,14 @@ from django.db import models
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 
+categories = (('style','style'),('life','life'),('entertainment','entertainment'),('food','food'))
+
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     photo = models.FileField(upload_to='static/uploads')
+    icon = models.FileField(upload_to='static/uploads')
     tag = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)

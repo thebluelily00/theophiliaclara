@@ -1,15 +1,14 @@
 {% extends 'blog/base.html' %}
 {% block css %}
 .t{
-  display:inline-block;
+  margin:40px;
   padding:30px;
-  margin:20px;
+  border:3px solid;
   text-align:center;
-  border:3px solid #CDAAAE;
 }
 
-.tagg{
-  text-align:center;
+.t p{
+  text-indent:0px;
 }
 {% endblock %}
 {% block title %}
@@ -23,6 +22,7 @@
   {% for post in posts %}
   <div class="{{ post.tag }} t">
     <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+    <img src="/media/{{ post.icon }}" class="pi" width="50%">
     <h4>{{ post.published_date }}</h4>
   </div>
   {% endfor %}

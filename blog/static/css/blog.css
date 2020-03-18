@@ -32,19 +32,63 @@ a{
   color:#B17A80;
   padding:5px;
   text-align:center;
+  position: relative;
 }
+
 
 #menu a{
   color:#B17A80;
   font-size: 1.2em;
 }
 
-#menu h3, #menu span, #menu ul, #menu li{
+#menu h3, #menu span, .tsocial li, .tsocial{
   display: inline-block;
   padding-left:10px;
   padding-right:10px;
   font-weight:normal;
   vertical-align: center;
+  text-transform: lowercase;
+}
+
+#sty li, #lif li, #ent li, #foo li{
+  display: block;
+  list-style-type: none;
+  padding:5px;
+  margin:5px;
+  text-align: left;
+}
+
+#c-sty a, #c-lif a, #c-ent a, #c-foo a{
+  display: block;
+}
+
+#sty, #lif, #ent, #foo{
+  z-index: 1;
+  position:absolute;
+  background-color:#F5F4F4;
+  padding:0px;
+  margin-left:-10px;
+}
+
+.eapps-instagram-feed{
+  text-align: center;
+  margin:auto;
+}
+
+.pi{
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.socc{
+  text-align: center;
+  margin:auto;
+}
+
+.help{
+  display: inline-block;
+  margin:10px;
   text-transform: lowercase;
 }
 
@@ -55,13 +99,13 @@ a{
 }
 
 h1{
-  font-family: sheila;
+  font-family: Gautreaux;
   text-align: center;
 }
 
 #theone{
   font-size: 4em;
-  height:60px;
+  height:calc(100%-45.5px);
 }
 
 .col1, .col2, .col3{
@@ -69,7 +113,7 @@ h1{
   width:240px;
   vertical-align: top;
   text-align: left;
-  padding:10px;
+  padding:30px 10px 30px 10px;
 }
 
 .footer{
@@ -92,6 +136,7 @@ h1{
   display: inline-block;
   padding:10px;
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 .social{
@@ -188,7 +233,7 @@ h1{
   margin-bottom:20px;
 }
 
-#id_photo{
+#id_photo, #id_icon{
   text-align: center;
 }
 
