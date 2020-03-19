@@ -14,6 +14,15 @@
     <script src="https://kit.fontawesome.com/c7f50bcb24.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161239002-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-161239002-1');
+    </script>
   </head>
   <body>
     {% if user.is_authenticated %} <!-- add, drafts, log out bar -->
