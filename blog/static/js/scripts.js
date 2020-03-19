@@ -1,5 +1,5 @@
-[$( document ).ready(function() {
-  console.log( 'ready!' );
+$( document ).ready(function(){
+  console.log( 'ready!');
   $('#sty, #lif, #ent, #foo').hide();
 
   var d = new Date();
@@ -21,7 +21,6 @@
       //nada
     }
   } //nothing really necessary
-
   $("#id_title").attr('placeholder','Title');
   $("#id_text").attr('placeholder','Text');
   $("#id_text").attr('autocorrect','on');
@@ -105,42 +104,55 @@
 ');
   });
 
+  // time for covid stuff
+  var creative = ["write a journal about what you do each day and how you're feeling about it.","write a short story about where you wish you were","write about someone you miss","write about what you think is beautiful","follow a drawing tutorial on youtube","color your own masterpiece using a <a href='http://library.nyam.org/colorourcollections/'>coloring sheet from a museum</a>","try out zentangles or fill a sheet with doodles","make a video each day about what you're up to", 'make a collection of music playlists to share with friends','try some macro photography on things in your home','make an instagram profile for your pet',"plan new outifits with clothes you don't normally wear."];
+  var relaxed = ["read a book in your house you've never looked at","look through a cookbook for some recipe inspiration","research online about an event or historical era that interests you","do online research about your heritage, whether it be simply the nationality or in depth geneological tracing.","watch your favorite movie",'take a <a href="https://www.southernliving.com/syndication/museums-with-virtual-tours?fbclid=IwAR0SfMsZLm7IY27VnOKtewMAq-wNeSLNjzf7xsivu70CnqLWlaXN9YOKii8">digital tour </a> of a museum from the comfort of your own home!','update your insta/twitter bio'];
+  var wornout = ["go take a hot shower","wash your face","put on some lip balm","brush out your hair or braid it","turn off music, find a quiet place to relax"];
+  var energetic = ["take your dog outside","do an ab workout!","do a leg workout","do an arm workout","follow a yoga or pilates video on youtube!","learn a new dance on youtube!","clean out your closet!",'rearrange your furniture','clean your windows'];
+  var lonely = ["find a crossword puzzle and text your friends to figure it out together","watch netflix with your friends digitally using a plugin on google chrome","find memes to send to your friend","check in with your family + see how they're feeling","facetime someone you care about",'ask friends for some music reccomendations'];
 
-  $('#c-sty').mouseenter(function(){
-    $("#sty").fadeIn();
+  //steps for function:
+  // change text, change background color, make text show
+  // make all buttons slideup, make advice show + tool slide slideDown
+  // somehow make redo fit this online
+  // close to redo all that DONE
+
+  var help = {'crea':[creative,'creative','#A0E5FA'],'rela':[relaxed,'chill','#8EB6DE'],'worn':[wornout,'worn out','#AABCF5'],'ener':[energetic,'energetic','#908EDE'],'lone':[lonely,'lonely','#BCA0FA']};
+  var last;
+
+  $('#tools').hide();
+
+  function produceIdea(heyo){
+    console.log(heyo);
+    console.log(help[heyo][0]);
+    console.log(help[heyo][1]);
+    console.log(help[heyo][2]);
+
+    $("#feeling").text(help[heyo][1]);
+    $("#feeling").css('background',help[heyo][2]);
+    $("#feeling").css('text-transform','uppercase');
+    $('#crea, #rela, #worn, #ener, #lone').slideUp();
+    $('#idea').html(help[heyo][0][Math.floor(Math.random() * help[heyo][0].length)]);
+    $('#tools').slideDown();
+    last = heyo;
+  }
+
+  $('.mai button').click(function(event){
+      event.preventDefault();
+      console.log('no1');
+      produceIdea($(this).attr("id"));
+      console.log('no2');
   });
 
-  $('#c-sty').mouseleave(function(){
-    $("#sty").fadeOut();
+  $("#close").click(function(){
+    $('#tools').slideUp();
+    $('#crea,#rela, #worn, #ener, #lone').slideDown();
+    $('#feeling').text('...');
+    $("#feeling").css('background','none');
+
+  });
+  $("#redo").click(function(){
+    produceIdea(last);
   });
 
-  $('#c-lif').mouseenter(function(){
-    $("#lif").fadeIn();
-  });
-
-  $('#c-lif').mouseleave(function(){
-    $("#lif").fadeOut();
-  });
-  $('#c-ent').mouseenter(function(){
-    $("#ent").fadeIn();
-  });
-
-  $('#c-ent').mouseleave(function(){
-    $("#ent").fadeOut();
-  });
-  $('#c-foo').mouseenter(function(){
-    $("#foo").fadeIn();
-  });
-
-  $('#c-foo').mouseleave(function(){
-    $("#foo").fadeOut();
-  });
-
-  //var cats = {
-  //    'style':['clothes','hair','nails','accessories'],
-  //    'life':['routines','advice','organization','wallpapers'],
-  //    'entertainment':['music','tv','books','movies'],
-  //    'food':['breakfast','mealprep','snacks','desserts'],
-//  }
-//  $("#id_cat2").attr('type','');
 });

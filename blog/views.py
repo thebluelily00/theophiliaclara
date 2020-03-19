@@ -14,6 +14,9 @@ def post_list(request):
 def about(request):
     return render(request, 'blog/about.html')
 
+def covid19(request):
+    return render(request, 'blog/covid19.html')
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()
