@@ -134,6 +134,7 @@ $( document ).ready(function(){
     $('#crea, #rela, #worn, #ener, #lone').slideUp();
     $('#idea').html(help[heyo][0][Math.floor(Math.random() * help[heyo][0].length)]);
     $('#tools').slideDown();
+    $('#note').css('color','grey');
     last = heyo;
   }
 
@@ -149,6 +150,7 @@ $( document ).ready(function(){
     $('#crea,#rela, #worn, #ener, #lone').slideDown();
     $('#feeling').text('...');
     $("#feeling").css('background','none');
+    $('#note').css('color','black');
 
   });
   $("#redo").click(function(){
