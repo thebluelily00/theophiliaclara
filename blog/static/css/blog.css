@@ -199,6 +199,10 @@ h1{
   color:#B17A80;
 }
 
+.p li{
+  line-height: 200%;
+}
+
 #logint{
   margin:auto;
 }
