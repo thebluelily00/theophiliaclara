@@ -3,8 +3,21 @@
 Home
 {% endblock %}
 {% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
+{% block css %}
+#agh{
+  text-align:center;
+  color:black;
+}
+#agh a{
+
+  color:black;
+}
+{% endblock %}
     {% load static %}
 {% block content %}
+<div class="covid">
+  <h3 id="agh"><a href="/covid19">stuck at home? don't know what to do? click here!</a></h3>
+</div>
 <div id="posts">
   {% for post in posts %}
   <div class="p {{ post.tag }}">
