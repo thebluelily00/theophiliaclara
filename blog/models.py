@@ -3,8 +3,6 @@ from django.db import models
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 
-categories = (('style','style'),('life','life'),('entertainment','entertainment'),('food','food'))
-
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)

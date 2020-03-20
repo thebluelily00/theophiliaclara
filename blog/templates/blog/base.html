@@ -26,6 +26,8 @@
     </script>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
     {% if user.is_authenticated %} <!-- add, drafts, log out bar -->
   <div class="top">
     <ul>
@@ -85,8 +87,8 @@
     </div>
   <div id="other"> <!-- not menus -->
     <div id="header">
-    <h1 id="theone">{% block header %}{% endblock %}</h1>
-  </div>
+      <h1 id="theone">{% block header %}{% endblock %}</h1>
+    </div>
     {% block content %} <!-- unique content for each page -->
     {% endblock %}
     <div class="footer"> <!-- 3 sections with links -->

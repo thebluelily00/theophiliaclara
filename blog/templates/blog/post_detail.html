@@ -49,11 +49,21 @@
 }
 
 .p{
-  padding:50px;
+  border:10px double #EFE8E8;
 }
 
 h2{
   text-align:center;
+}
+
+.shareables{
+  text-align:center;
+  font-size:1.3em;
+  padding-bottom:10px;
+}
+
+.fb-share-button{
+  display:inline-block;
 }
 
 {% endblock %}
@@ -69,6 +79,9 @@ h2{
             <h2>{{ post.published_date }}</h2>
           </div>
         {% endif %}
+        <div class="shareables">
+          <a class="twitter-share-button fab fa-twitter" href="https://twitter.com/intent/tweet?text=💫 {{post.title}} -- New post from @theophiliaclara. Read at www.theophiliaclara.com{% url 'post_detail' pk=post.pk %} 💫"></a>
+        </div>
         {% load static %}
         <div class="centt">
           <img src="/media/{{post.photo}}" style="max-width:80%;" class="litness">
@@ -109,7 +122,13 @@ h2{
           {% empty %}
               <p>No comments here yet :(</p>
           {% endfor %}
-        </div>
+        </div></div>
+    <div class="side">
+      <div class="archive">
+
+      </div>
+      <!-- insta -->
+      <!-- pinterest -->
     </div>
     <div class="footer">
 
