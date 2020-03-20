@@ -347,6 +347,10 @@ p{
   .super-responsive-wrapper{
     width:350px;
   }
+
+  .pi{
+    width:90%;
+  }
 }
 
 @media print{
