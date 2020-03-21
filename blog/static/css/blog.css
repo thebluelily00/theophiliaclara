@@ -344,7 +344,7 @@ p{
 
 @media only screen and (orientation:portrait){
   .post-form input, .post-form textarea{
-    width:75vw;
+    width:75%;
   }
   .post-form{
     text-align: left;
