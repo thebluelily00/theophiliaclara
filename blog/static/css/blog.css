@@ -15,14 +15,24 @@ a{
   background:#CDAAAE;
   color:white;
   border-radius: 100%;
-  width:175px;
-  height:175px;
+  width:140px;
+  height:140px;
   padding-top:45px;
   padding-left:20px;
   padding-right:20px;
   margin-left:auto;
   margin-right:auto;
   margin-bottom:20px;
+}
+
+#contrast p{
+  padding:0px;
+  margin:0px;
+}
+
+#contrast .social{
+  padding:0px;
+  margin:0px;
 }
 
 #contrast a{color:white;}
