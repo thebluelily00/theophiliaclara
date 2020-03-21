@@ -360,6 +360,10 @@ p{
     margin:15px;
     padding:15px;
   }
+
+  .s{
+    max-width:100%;
+  }
 }
 
 @media print{
