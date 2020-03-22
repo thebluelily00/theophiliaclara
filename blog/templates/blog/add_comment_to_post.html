@@ -9,11 +9,17 @@
 .post-form{
   text-align:center;
 }
+.left{
+  width:100%;
+}
+.sidebar{
+  display:none;
+}
 {% endblock %}
 {% block title %}Write comment{% endblock %}
 {% block header %}New comment{% endblock %}
 {% block content %}
-<div class="editd">
+<div class="editd left">
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form }}
         <button type="submit" class="save btn btn-default">Send</button>

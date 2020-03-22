@@ -267,7 +267,7 @@ h1{
 
 hr{
   border:2px solid white;
-  margin:30px;
+  margin:10px 50px 10px 50px;
 }
 
 .p p{
@@ -284,8 +284,16 @@ p{
 }
 
 .comment{
-  border:3px solid white;
-  margin-bottom:10px;
+  border-left:3px solid white;
+  padding-bottom:0px;
+}
+.comment p, .comment h3, .comment h4{
+  padding:5px;
+  margin:0px;
+  line-height:150%;
+}
+.comment p{
+  line-height:200%;
 }
 
 .p iframe{
@@ -342,10 +350,94 @@ p{
   font-size: 1.15em;
 }
 
+.sidebar{
+  width:20%;
+  display:inline-block;
+  vertical-align:top;
+  padding-left:30px;
+  padding-right:30px;
+  padding-bottom:30px;
+  /*border-top:4px solid #D9B8B8;
+  border-bottom:4px solid #D9B8B8;*/
+  margin-top:40px;
+  margin-right:40px;
+}
+
+#searchbutton{
+  border:0px;
+  background:none;
+  font-size:1.02em;
+}
+
+.search{
+  text-align:center;
+  padding-bottom:20px;
+}
+
+#searchbox{
+  width:calc(100% - 45px);
+  border:none;
+  background:#EFE8E8;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+#playlist{
+  width:100%;
+}
+#agh{
+  line-height:200%;
+  margin-top:0px;
+}
+#ooh{
+  display:block;
+  text-align:right;
+}
+.ooh{
+  display:block;
+  text-align:left;
+}
+
+.left{
+  width:70%;
+  display:inline-block;
+}
+
+@media only screen and (max-width:1045px){
+  .left{
+    width:100%;
+    display:block;
+  }
+  .sidebar{
+    width:100%;
+    padding:0px;
+    margin:0px;
+    display:block;
+  }
+  #playlist{
+    width:300px;
+  }
+
+  #ooh, .ooh{
+    display:inline-block;
+  }
+  .search{
+    padding-left:40px;
+    padding-right:40px;
+  }
+  #searchbox{
+    width:300px;
+  }
+  .spotif{
+    padding:20px;
+  }
+}
+
 @media only screen and (orientation:portrait){
   .post-form input, .post-form textarea{
     width:75%;
   }
+
   .post-form{
     text-align: left;
   }
@@ -369,10 +461,6 @@ p{
   .p{
     margin:15px;
     padding:15px;
-  }
-
-  .s{
-    max-width:100%;
   }
 }
 
