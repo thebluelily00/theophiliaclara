@@ -11,12 +11,98 @@ Home
 #agh a{
   color:black;
 }
+#posts{
+  width:70%;
+  display:inline-block;
+}
+.sidebar{
+  width:20%;
+  display:inline-block;
+  vertical-align:top;
+  padding-left:30px;
+  padding-right:30px;
+  padding-bottom:30px;
+  /*border-top:4px solid #D9B8B8;
+  border-bottom:4px solid #D9B8B8;*/
+  margin-top:40px;
+  margin-right:40px;
+}
+#searchbutton{
+  border:0px;
+  background:none;
+  font-size:1.02em;
+}
+.search{
+  text-align:center;
+  padding-bottom:20px;
+}
+#searchbox{
+  width:calc(100% - 45px);
+  border:none;
+  background:#EFE8E8;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+#other{
+  text-align:center;
+}
+p{
+  text-align:justify;
+}
+#playlist{
+  width:100%;
+}
+#agh{
+  line-height:200%;
+  margin-top:0px;
+}
+#ooh{
+  display:block;
+  text-align:right;
+}
+.ooh{
+  display:block;
+  text-align:left;
+}
+.lightwidget-widget{
+  width:100%;
+}
+@media only screen and (max-width:1045px){
+  #posts{
+    width:100%;
+    display:block;
+  }
+  .sidebar{
+    width:100%;
+    padding:0px;
+    margin:0px;
+    display:block;
+  }
+  #playlist{
+    width:300px;
+  }
+
+  #ooh, .ooh{
+    display:inline-block;
+  }
+  .search{
+    padding-left:40px;
+    padding-right:40px;
+  }
+  #searchbox{
+    width:300px;
+  }
+  .lightwidget-widget{
+    width:90%;
+  }
+  .spotif{
+    padding:20px;
+  }
+}
 {% endblock %}
     {% load static %}
 {% block content %}
-<div class="covid">
-  <h3 id="agh"><a href="/covid19">stuck at home? don't know what to do? click here!</a></h3>
-</div>
+<h2 style="text-align:center;font-weight:normal;"><em>live inspired + live well</em></h2>
 <div id="posts">
   {% for post in posts %}
   <div class="p {{ post.tag }}">
@@ -27,5 +113,16 @@ Home
   </div>
 {% endfor %}
 </div>
-<!-- LightWidget WIDGET <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/2a7304b1612a5001ba152fdea79499b6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>-->
+<div class="sidebar">
+  <div class="covid">
+    <h3 id="agh"><a href="/covid19"><span class="ooh">stuck at home? </span> <span id="ooh">don't know what to do? </span> <span class='ooh'>click here!</span></a></h3>
+  </div>
+  <div class="instag">
+    <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/1588a3f6d58856198ccb6b570839ed4c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+  </div>
+  <div class="spotif">
+    <iframe src="https://open.spotify.com/embed/playlist/24VzM1S5za41mUGJu0xog7" id="playlist" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+</div>
+<!--<div class="search"><input type="text" name="" value="" id="searchbox"><button type="button" name="button" id="searchbutton"><i class="fas fa-search"></i></button></div><div class="archive"></div><div class="about"><p style="text-indent:0px;text-align:center;"><a href="/about">about</a></p></div>-->
 {% endblock %}
