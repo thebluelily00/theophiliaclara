@@ -11,7 +11,7 @@ h2{
 }
 .p{
   padding:0px 0px 10px 0px;
-  margin:0px;
+  margin:0px 0px 30px 0px;
   display:inline-block;
 }
 .o2{
@@ -28,10 +28,14 @@ h2{
 .content p{
   text-align:left;
 }
+
+.p-inside{
+  padding:20px;
+}
 @media only screen and (max-width:1045px){
   .p{
     width:90%;
-    margin:auto;
+    margin:0px auto 30px auto;
     display:block;
   }
   .sidebar{
@@ -47,6 +51,7 @@ h2{
 {% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
 {% block content %}
     <div class="p left" style="background:white;border:10px double #EFE8E8;">
+      <div class="p-inside">
         <h1 class='postitle'>{{ post.title }}</h1>
         {% if post.published_date %}
           <div id="date">
@@ -58,7 +63,7 @@ h2{
         </div>
         {% load static %}
         <div class="centt">
-          <img src="/media/{{post.photo}}" style="max-width:80%;" class="litness">
+          <img src="/media/{{post.photo}}" class="litness">
         </div>
         <div class="content">
           {{ post.text|safe }}
@@ -100,5 +105,6 @@ h2{
               <p>No comments here yet :(</p>
           {% endfor %}
         </div>
+      </div>
     </div>
 {% endblock %}

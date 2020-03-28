@@ -299,7 +299,7 @@ p{
 .p iframe{
   display: block;
   margin:auto;
-  padding:20px;
+  padding:10px;
 }
 
 #commentt{
@@ -330,9 +330,10 @@ p{
   vertical-align: center;
 }
 
-.litness img{
+.litness{
   text-align: center;
   margin:auto;
+  width:70%;
 }
 
 .centt{
@@ -461,6 +462,15 @@ p{
   .p{
     margin:15px;
     padding:15px;
+  }
+
+  .litness{
+    width:80vw;
+  }
+  .yt{
+    width:90%;
+    height:calc(0.5625*90%);
+    margin:auto;
   }
 }
 
