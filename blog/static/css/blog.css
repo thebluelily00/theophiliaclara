@@ -120,7 +120,7 @@ h1{
 
 .col1, .col2, .col3{
   display: inline-block;
-  width:240px;
+  width:300px;
   vertical-align: top;
   text-align: left;
   padding:30px 10px 30px 10px;
@@ -160,9 +160,8 @@ h1{
 }
 
 .tag{
-  list-style-type: '☆  ';
-  display: inline;
-  list-style-position: inside;
+  display:inline-block;
+  padding:5px;
   line-height: 200%;
 }
 
@@ -338,6 +337,10 @@ p{
 
 .centt{
   text-align: center;
+}
+
+.shareables a{
+  padding:12px;
 }
 
 .qu{
