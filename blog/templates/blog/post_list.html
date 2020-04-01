@@ -22,10 +22,12 @@ Home
 <div id="posts" class="left">
   {% for post in posts %}
   <div class="p {{ post.tag }}">
-    <h1 class="pt"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    <a href="{% url 'post_detail' pk=post.pk %}">
+      <h1 class="pt">{{ post.title }}</h1>
       <h3>{{ post.published_date }}</h3>
       <img src="/media/{{ post.icon }}" class="pi" width="50%">
-      <h4>{{ post.approved_comments|length }} comments</h4>
+    </a>
+      <a href="{% url 'post_detail' pk=post.pk %}#commentt"><h4>{{ post.approved_comments|length }} comments</h4></a>
   </div>
 {% endfor %}
 </div>
