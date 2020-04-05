@@ -52,7 +52,8 @@ h2{
 {% endblock %}
 {% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
 {% block meta %}
-    {% if post.tag == "recipe" %}
+    {% if post.tag == "recipes" %}
+      <meta property="og:site_name" content="theophiliaclara.com" />
     {% else %}
       <meta property="og:type" content="blog" />
       <meta property="og:title" content="{{post.title}}" />

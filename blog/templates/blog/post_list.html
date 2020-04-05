@@ -15,29 +15,38 @@ Home
 #other{
   text-align:center;
 }
+#fhh, #topfilt{
+  display:inline-block;
+  color:#A38383;
+}
+.tf a{
+  color:#A38383;
+  text-decoration:none;
+}
 {% endblock %}
     {% load static %}
 {% block content %}
-<h2 style="text-align:center;font-weight:normal;"><em>live inspired + live well</em></h2>
 <div id="posts" class="left">
-  <!--<div class="filtration">
-    <h2>Filter posts</h2>
+  <div class="filtration">
+    <h2 id="fhh">Filter:</h2>
     <ul id="topfilt">
       {% for tag in tags %}
-        <li class='tf'><a href="{% url 'tags' tag=tag %}">{{ tag }}</a></li>
+        <li class='tf'><a href="{% url 'tags' tag=tag %}" class="oa">{{ tag }}</a></li>
       {% endfor %}
     </ul>
-  </div>-->
-  {% for post in posts %}
-  <div class="p {{ post.tag }}">
-    <a href="{% url 'post_detail' pk=post.pk %}">
-      <h1 class="pt">{{ post.title }}</h1>
-      <h3>{{ post.published_date }}</h3>
-      <img src="/media/{{ post.icon }}" class="pi" width="50%">
-    </a>
-      <a href="{% url 'post_detail' pk=post.pk %}#commentt"><h4>{{ post.approved_comments|length }} comments</h4></a>
   </div>
-{% endfor %}
+  <div class="newpostbox">
+    {% for post in posts %}
+    <div class="p {{ post.tag }}">
+      <a href="{% url 'post_detail' pk=post.pk %}">
+        <h1 class="pt">{{ post.title }}</h1>
+        <h3>{{ post.published_date }}</h3>
+        <img src="/media/{{ post.icon }}" class="pi" width="50%">
+      </a>
+        <a href="{% url 'post_detail' pk=post.pk %}#commentt"><h4>{{ post.approved_comments|length }} comments</h4></a>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 <!--<div class="search"><input type="text" name="" value="" id="searchbox"><button type="button" name="button" id="searchbutton"><i class="fas fa-search"></i></button></div><div class="archive"></div><div class="about"><p style="text-indent:0px;text-align:center;"><a href="/about">about</a></p></div>-->
 {% endblock %}

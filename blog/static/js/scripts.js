@@ -157,4 +157,15 @@ $( document ).ready(function(){
     produceIdea(last);
   });
 
+  // recipe pin setup
+  if($('.recipee')){
+    $(".recipee h2").attr('class', $('.recipee h2').attr('class')+' p-name');
+    $(".ingredients li").attr('class', $('.ingredients li').attr('class')+' p-ingredient');
+    $(".instructions ol").attr('class', $('.instructions ul').attr('class')+' e-instructions');
+    $("#yield").attr('class', $('#yield').attr('class')+' p-yield');
+    $('.litness').attr('class',$('.litness').attr('class')+' u-photo');
+    $('#btime').attr('class',$('#btime').attr('class')+' dt-duration');
+    $('#btime').attr('datetime','1H');
+  }
+
 });

@@ -6,7 +6,7 @@ body, html{
   font-family: playfair-display;
 }
 
-a{
+ a:not(.oa){
   color:#CDAAAE;
   text-decoration: none;
 }
@@ -201,6 +201,8 @@ h1{
 
 .filtration{
   margin-top:40px;
+  margin-bottom:10px;
+  font-family:'letter-gothic-std';
 }
 
 .p h3, .p h4{
@@ -215,6 +217,7 @@ h1{
 .p:first-child{
   background-color: #EFE8E8;
   background: #EFE8E8;
+  margin-top: 0px;
 }
 
 #logint{
