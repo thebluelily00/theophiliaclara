@@ -14,15 +14,26 @@
 #theone{
   text-transform:capitalize;
 }
+
+h2{
+  text-align:center;
+}
+
+#nombre{
+  font-family:'letter-gothic-std';
+  margin-top:40px;
+}
+
 {% endblock %}
 {% block title %}
 {{ tag }}
 {% endblock %}
 {% block header %}
-{{ tag }}
+<a href="/">Theophilia Clara</a>
 {% endblock %}
 {% block content %}
 <div class="tagg left">
+  <h2 id="nombre">Posts from <em>{{ tag }}</em></h2>
   {% for post in posts %}
   <div class="{{ post.tag }} t">
     <a href="{% url 'post_detail' pk=post.pk %}">

@@ -217,7 +217,6 @@ h1{
 .p:first-child{
   background-color: #EFE8E8;
   background: #EFE8E8;
-  margin-top: 0px;
 }
 
 #logint{
@@ -503,7 +502,7 @@ p{
   }
 
   .p{
-    margin:15px;
+    margin:35px;
     padding:15px;
   }
 
@@ -514,6 +513,10 @@ p{
     width:90%;
     height:calc(0.5625*90%);
     margin:auto;
+  }
+  .filtration{
+    margin-left:35px;
+    margin-left:35px;
   }
 }
 
