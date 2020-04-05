@@ -518,6 +518,9 @@ p{
     margin-left:35px;
     margin-right:35px;
   }
+  .sidebar{
+    text-align:center;
+  }
 }
 
 @media print{
