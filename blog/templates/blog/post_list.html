@@ -20,6 +20,14 @@ Home
 {% block content %}
 <h2 style="text-align:center;font-weight:normal;"><em>live inspired + live well</em></h2>
 <div id="posts" class="left">
+  <!--<div class="filtration">
+    <h2>Filter posts</h2>
+    <ul id="topfilt">
+      {% for tag in tags %}
+        <li class='tf'><a href="{% url 'tags' tag=tag %}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>-->
   {% for post in posts %}
   <div class="p {{ post.tag }}">
     <a href="{% url 'post_detail' pk=post.pk %}">

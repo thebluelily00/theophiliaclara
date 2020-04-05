@@ -199,8 +199,8 @@ h1{
   border:3px solid #EFE8E8;
 }
 
-.p:first-child{
-  background-color: #EFE8E8;
+.filtration{
+  margin-top:40px;
 }
 
 .p h3, .p h4{
@@ -210,6 +210,11 @@ h1{
 
 .p li{
   line-height: 200%;
+}
+
+.p:first-child{
+  background-color: #EFE8E8;
+  background: #EFE8E8;
 }
 
 #logint{
@@ -303,6 +308,23 @@ p{
 
 #commentt{
   text-align: center;
+}
+
+.prep,.bake,.serves{
+  display:inline-block;
+  text-align:center;
+  padding:10px;
+}
+.info{
+  text-align:center;
+}
+
+.recipee h3{
+  color:black;
+}
+
+.recipee ul, ol{
+  text-align:left;
 }
 
 .postitle{
@@ -407,6 +429,21 @@ p{
   display:inline-block;
 }
 
+.fa-print{
+  font-size: 1.5em;
+}
+
+.tf{
+  display:inline-block;
+  padding:5px;
+}
+
+#topfilt{
+  text-indent:0px;
+  padding:0px;
+  margin:0px;
+}
+
 @media only screen and (max-width:1045px){
   .left{
     width:100%;
@@ -478,11 +515,23 @@ p{
 }
 
 @media print{
-  .top, #menu, .footer, .tools, .com, .taglink{
+  #theone, .top, #menu, .footer, .tools, .com, .taglink, .sidebar, .litness, #date, .shareables, #name{
     display: none;
   }
 
-  .p{
+  .p, .left, .p-inside{
     width:95%;
+    border:none;
+    margin:auto;
+    width:100%;
+    padding:0px;
+  }
+
+  h2, h3{
+    text-align:center;
+  }
+  .left, .p{
+    overflow: visible;
+    display: block;
   }
 }

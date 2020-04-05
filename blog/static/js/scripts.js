@@ -11,12 +11,17 @@ $( document ).ready(function(){
   $("#id_text").attr('autocorrect','on');
   $("#id_tag").attr('placeholder','Tag');
   $("#id_author").attr('placeholder','Author name');
+  if($(".recipee")){
+    $(".recipee").append('<i class="fas fa-print" onclick="window.print();return false;"></i>');
+  }
   $("#posty p:nth-child(3)").append("\
     <div class='text-options'>\
       <ul>\
+        <li><i class='fas fa-heading' id='h2'></i></li> \
         <li><i class='fas fa-align-justify' id='paragraph'></i></li>\
         <li><i class='fas fa-list-ol' id='ordered'></i></li>\
         <li><i class='fas fa-list-ul' id='unordered'></i></li>\
+        <li><i class='far fa-circle' id='listitem'></i></li>\
         <li><i class='fas fa-italic' id='italic'></i></li>\
         <li><i class='fas fa-bold' id='bold'></i></li>\
         <li><i class='fas fa-underline' id='underline'></i></li>\
@@ -28,6 +33,10 @@ $( document ).ready(function(){
     </div>\
   ");
 
+  $('#h2').click(function(){
+    $('#id_text').val($('#id_text').val() + '\n <h2></h2>');
+  });
+
   $('#paragraph').click(function(){
     $('#id_text').val($('#id_text').val() + '\n <p></p>');
   });
@@ -38,6 +47,10 @@ $( document ).ready(function(){
 
   $('#unordered').click(function(){
     $('#id_text').val($('#id_text').val() + '\n <ul>\n <li></li>\n </ul>');
+  });
+
+  $('#listitem').click(function(){
+    $('#id_text').val($('#id_text').val() + '\n <li></li>');
   });
 
   $('#italic').click(function(){
@@ -66,26 +79,28 @@ $( document ).ready(function(){
   //ADD ANOTHER BOX FOR MAKING LISTS. UNDER APPEND + THIS SECTION TO ACTUALLY FNCTION
   // ALSO, add UNDERLINE and STRIKETHROUGH
   $('#recipe').click(function(){
-    $('#id_text').val($('#id_text').val() + '\
-<div class="recipe">\n\
-    <h2></h2>\n\
-    <p></p>\n\
-    <ul class="recipe-menu">\n\
-      <li>[] <br> servings</li>\n\
-      <li>prep <br> (time)</li>\n\
-      <li>cook <br> (time)</li>\n\
-    </ul>\n\
-    <hr>\n\
-    <h3><em>Ingredients</em></h3>\n\
-    <ul id="ingredients">\n\
-        <li></li>\n\
-    </ul>\n\
-    <br>\n\
-    <h3><em>Instructions</em></h3>\n\
-    <ol id="instruct">\n\
-        <li></li>\n\
-    </ol>\n\
-</div>\n\
+    $('#id_text').val($('#id_text').val() + '\n \
+    <div class="recipe">\n \
+      <h2></h2>\n \
+      <h3><em>by @theophiliaclara</em></h3>\n \
+      <div class="info">\n \
+        <div class="prep"><span>Prep time: </span><span> minutes</span></div>\n \
+        <div class="bake"><span>Bake time: </span><span> minutes</span></div>\n \
+        <div class="serves"><span>Servings: </span><span></span></div>\n \
+      </div>\n \
+      <div class="ingredients">\n \
+        <h3>What you\'ll need:</h3>\n \
+        <ul>\n \
+          <li></li>\n \
+        </ul>\n \
+      </div>\n \
+      <div class="instructions">\n \
+        <h3>Directions:</h3>\n \
+        <ol>\n \
+          <li></li>\n \
+        </ol>\n \
+      </div>\n \
+    </div>\n \
 ');
   });
 

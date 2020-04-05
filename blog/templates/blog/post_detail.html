@@ -13,6 +13,7 @@ h2{
   padding:0px 0px 10px 0px;
   margin:0px 0px 30px 0px;
   display:inline-block;
+  border:10px double #EFE8E8;
 }
 .o2{
   text-align:center;
@@ -50,7 +51,7 @@ h2{
 {% endblock %}
 {% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
 {% block content %}
-    <div class="p left" style="background:white;border:10px double #EFE8E8;">
+    <div class="p left" style="background:white;">
       <div class="p-inside">
         <h1 class='postitle'>{{ post.title }}</h1>
         {% if post.published_date %}
