@@ -10,6 +10,7 @@ class Post(models.Model):
     photo = models.FileField(upload_to='static/uploads')
     icon = models.FileField(upload_to='static/uploads')
     tag = models.CharField(max_length=200)
+    css = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 

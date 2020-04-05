@@ -45,11 +45,24 @@ h2{
     display:block;
   }
 }
+{{post.css}}
 {% endblock %}
 {% block title %}
 {{ post.title }}
 {% endblock %}
 {% block header %}<a href="/">Theophilia Clara</a> {% endblock %}
+{% block meta %}
+    {% if post.tag == "recipe" %}
+    {% else %}
+      <meta property="og:type" content="blog" />
+      <meta property="og:title" content="{{post.title}}" />
+      <meta property="og:description" content="{{post.text|truncatechars:240}}" />
+      <meta property="og:url" content="https://www.theophiliaclara.com{% url 'post_detail' pk=post.pk %}" />
+      <meta property="og:site_name" content="https://www.theophiliaclara.com" />
+      <meta property="article:published_time" content="{{post.published_date}}" />
+      <meta property="article:author" content="Theophilia Clara" />
+    {% endif %}
+{% endblock %}
 {% block content %}
     <div class="p left" style="background:white;">
       <div class="p-inside">
