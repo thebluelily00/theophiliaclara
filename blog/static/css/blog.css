@@ -524,8 +524,9 @@ p{
 }
 
 @media print{
-  #theone, .top, #menu, .footer, .tools, .com, .taglink, .sidebar, .litness, #date, .shareables, #name{
+  #theone, .top, #menu, .footer, .tools, .com, .taglink, .sidebar, .litness, #date, .shareables, #name, .fa-print, .fas, #header, .p-name{
     display: none;
+    visibility: hidden;
   }
 
   .p, .left, .p-inside{
