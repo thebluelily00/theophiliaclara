@@ -159,6 +159,7 @@ $( document ).ready(function(){
 
   // recipe pin setup
   if($('.recipee')){
+    $(".recipee").attr('class', $('.recipee').attr('class')+'  h-recipe');
     $(".recipee h2").attr('class', $('.recipee h2').attr('class')+' p-name');
     $(".ingredients li").attr('class', $('.ingredients li').attr('class')+' p-ingredient');
     $(".instructions ol").attr('class', $('.instructions ul').attr('class')+' e-instructions');
