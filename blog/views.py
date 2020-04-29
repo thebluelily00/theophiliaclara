@@ -17,13 +17,16 @@ def about(request):
 def covid19(request):
     return render(request, 'blog/covid19.html')
 
+def privacy(request):
+    return render(request, 'blog/privacy.html')
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()
     return render(request, 'blog/post_detail.html', {'post': post,'tags':tags})
 
 def tags(request, tag):
-    posts = Post.objects.filter(tag=tag).order_by('published_date')
+    posts = Post.objects.filter(tag=tag).order_by('-published_date')
     tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()
     return render(request, 'blog/tags.html', {'posts':posts, 'tags':tags, 'tag':tag})
 
