@@ -23,6 +23,7 @@ body, html{
   margin-left:auto;
   margin-right:auto;
   margin-bottom:20px;
+  margin-top:40px;
 }
 
 .imagess{
@@ -140,6 +141,7 @@ h1{
 .col3 span{
   line-height: 200%;
   margin:auto;
+  margin-bottom:10px;
 }
 
 .col3{
