@@ -27,7 +27,13 @@ body, html{
 
 .imagess{
   text-align: center;
+  margin:auto;
   margin-bottom:40px;
+}
+
+.imagess img{
+  text-align:center;
+  margin:auto;
 }
 
 #contrast p{
