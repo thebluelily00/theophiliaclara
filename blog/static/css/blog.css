@@ -25,6 +25,11 @@ body, html{
   margin-bottom:20px;
 }
 
+.imagess{
+  text-align: center;
+  margin-bottom:40px;
+}
+
 #contrast p{
   padding:0px;
   margin:0px;
@@ -126,6 +131,15 @@ h1{
   padding:30px 10px 30px 10px;
 }
 
+.col3 span{
+  line-height: 200%;
+  margin:auto;
+}
+
+.col3{
+  text-align:center;
+}
+
 .footer{
   background-color:#D9B8B8;
   color:white;
@@ -155,7 +169,7 @@ h1{
 }
 
 .copy{
-  display: block;
+  display:block;
   text-align: center;
 }
 
@@ -166,7 +180,7 @@ h1{
 }
 
 #filter{
-  max-height:60px;
+  max-height:100px;
   overflow: scroll;
   padding:0px;
   text-align: center;

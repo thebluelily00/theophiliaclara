@@ -42,7 +42,9 @@
             <ul class="tsocial">
                 <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
                 <li><a class="fab fa-instagram" href="https://www.instagram.com/theophiliaclara/" target="blank" id="insta"></a></li>
+                <li><a class="fab fa-twitter" href="https://twitter.com/theophiliaclara"></a></li>
                 <li><a class="fab fa-spotify" href="https://open.spotify.com/user/5m6nug9z882ud8ijo5blbe7v8?si=C0u19-wVQTiYJl6zg1KSJA" id="spotify"></a> </li>
+                <!--<li style="vertical-align: text-bottom;"><a class="fab" href="https://www.liketoknow.it/theophiliaclara"><img src="{% static '/images/LIKEtoKNOW.it_Icon.png' %}" alt="liketoknow.it icon" width="25px"></a></li>-->
             </ul>
             <a href="{% url 'about' %}" class="help">About</a>
         <!--  <div id="c-sty">
@@ -112,10 +114,10 @@
     <div class="footer"> <!-- 3 sections with links -->
       <div class="col1"> <!-- filter -->
         <h2 class='ex'>Filter</h2>
-        <ul id="filter">🌷
+        <ul id="filter">
           {% for tag in tags %}
             <li class='tag'><a href="{% url 'tags' tag=tag %}">{{ tag }}</a></li>
-          {% endfor %}🌷
+          {% endfor %}
         </ul>
       </div>
       <div class="col2"> <!-- social media -->
@@ -123,12 +125,14 @@
           <ul class="social">
             <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
             <li><a class="fab fa-instagram" href="https://www.instagram.com/theophiliaclara/" target="blank" id="insta"></a></li>
+            <li><a class="fab fa-twitter" href="https://twitter.com/theophiliaclara"></a></li>
             <li><a class="fab fa-spotify" href="https://open.spotify.com/user/5m6nug9z882ud8ijo5blbe7v8?si=C0u19-wVQTiYJl6zg1KSJA" id="spotify"></a> </li>
           </ul>
       </div>
       <div class="col3"> <!-- extra info -->
-        <h2><a href="{% url 'about' %}">About</a></h2>
-        <a href="privacy" style="margin:auto;text-align:center;display:block;margin-bottom:10px;"><em>Privacy Policy</em></a>
+        <h2>Other</h2>
+        <span><a href="{% url 'about' %}" style="margin:auto;text-align:center;display:inline-block;">About</a></span> •
+        <span><a href="privacy" style="margin:auto;text-align:center;display:inline-block;">Privacy Policy</a></span>
         <span class='copy'></span>
           <!--{% if user.is_authenticated %}
           {% else %}

@@ -14,39 +14,19 @@ h3{
 About
 {% endblock %}
 {% block header %}About{% endblock %}
-
+{% load static %}
 {% block content %}
 <div class="about" style="padding-left:40px;padding-right:40px;">
   <p>
     <!--Theophilia Clara was created with the intent of helping people live the best life they can. This blog was named after my great grandmother, a woman whose name is always spoken with love and stories of kindness. With that in mind, my goal is to provide information to begin improving your life in small ways, and spread the goodness to others 😊-->
   </p>
-  <p>This blog is named after my great grandmother. Her name has always been associated with care and positivity, appearing like a beam of light in others' lives. With that in mind, I'd like this blog to serve the same purpose! I want to help others become better, more fulfilled versions of themselves. </p>
-  <h3>posts will usually be about</h3>
-  <ul style="line-height:200%;">
-    <li>Food
-      <!--<ul>
-        <li><a href="/tag/breakfast">Breakfast</a> ideas to start the day out well</li>
-        <li>Healthy <a href="/tag/dessert">desserts</a></li>
-        <li>Occasional <a href="/tag/meal prep">meal prep</a> recipes</li>
-      </ul>-->
-    </li>
-    <li>Style
-      <!--<ul>
-        <li></li>
-      </ul>-->
-    </li>
-    <li>Organization
-      <!--<ul>
-        <li></li>
-      </ul>-->
-    </li>
-    <li>Entertainment
-    <!--  <ul>
-        <li></li>
-      </ul>-->
-    </li>
-  </ul>
+  <p>This blog is named after my great grandmother. Her name has always been associated with care and positivity, appearing like a beam of light in others' lives. With that in mind, I'd like this blog to serve the same purpose! I want to help others become better, more fulfilled versions of themselves. Posts will usually be about fashion, beauty, organization, food, and anything else I feel like posting about 😊</p>
+  <p>In my free time I love watching old english TV shows (I've recently loved <em>"Are You Being Served?"</em>), listening to music (especially love 80s & early 2000s), or reading up on super random things (anything from Tudor era history to nutritional science studies and beyond). I absolutely love learning about langauges, I'm working on Spanish right now (my favorite accents are Cuban and Argentinian) and I'd love to work on Italian & Lithuanian someday. I have two adorable pets, a Scottish terrier and a Norwegian forest cat, I can definitely be found bugging them for like 50% of quarantine. Also, fun fact: I've dabbled with programming since 2014, so this website was created all on my own! I made it using Python with Django as the framework, and make additions and changes to improve the UX weekly.</p>
   <br>
+  <div class="imagess">
+    <img src="{% static '/images/bellamoves.gif' %}" width="200px">
+    <img src="{% static '/images/carlislemoves.gif' %}" width="200px">
+  </div>
   <div id="contrast">
     <p style="text-align:center; text-indent:0px;"><a href="">Don't miss out,<br> follow!</a></p>
     <ul class="social">
