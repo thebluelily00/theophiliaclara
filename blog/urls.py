@@ -16,4 +16,5 @@ urlpatterns = [
     path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
     path('covid19', views.covid19, name='covid19'),
     path('privacy',views.privacy, name='privacy'),
+    path('bella',views.bella, name="bella"),
 ]

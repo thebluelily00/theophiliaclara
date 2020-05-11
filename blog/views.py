@@ -20,6 +20,9 @@ def covid19(request):
 def privacy(request):
     return render(request, 'blog/privacy.html')
 
+def bella(request):
+    return render(request, 'blog/bella.html')
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     tags = Post.objects.filter(published_date__lte=timezone.now()).values_list('tag', flat=True).distinct()

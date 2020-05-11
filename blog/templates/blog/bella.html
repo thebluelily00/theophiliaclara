@@ -1,0 +1,179 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block css %}
+#menu, .footer, .sidebar, .top, #header h2{
+  display:none;
+}
+
+*{
+  font-family:'letter-gothic-std';
+}
+
+.ff img{
+  width:100%;
+}
+
+.ff{
+  width:300px;
+  text-align:center;
+  padding:15px;
+  margin:10px;
+  display:inline-block;
+  background-color:white;
+  border-radius:5px;
+}
+
+html{
+  background:#BDD9D8;
+  text-align:center;
+  column-count:4;
+}
+
+#theone{
+  color:white;
+}
+
+@media only screen and (orientation:portrait){
+  html{
+    column-count:1;
+  }
+
+  .ff{
+    width:80vw;
+    padding:15px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+    display:block;
+  }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1200px){
+  html{
+    column-count:3;
+  }
+  .ff{
+    width:275px;
+  }
+}
+
+@media only screen and (max-width:1000px) and (min-width:900px){
+  html{
+    column-count:2;
+  }
+  .ff{
+    width:400px;
+  }
+}
+
+@media only screen and (max-width:899px) and (min-width:700px){
+  .ff{
+    width:300px;
+  }
+    html{
+      column-count:2;
+    }
+}
+{% endblock %}
+{% block title %}
+Bella
+{% endblock %}
+{% block header %}
+Bella being Bella
+{% endblock %}
+{% block content %}
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/fluffy/floofy.jpg' %}" alt="">
+    <p style="text-indent:0px;">the queen noticing a guest's arrival</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/fluffy/vampirept2.jpg' %}" alt="">
+    <p style="text-indent:0px;">my vampire form coming out at dusk</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/inspirational/chair.jpg' %}" alt="">
+    <p style="text-indent:0px;">work can always wait, it's more important for me to use your chair right now :)</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/inspirational/meece.jpg' %}" alt="">
+    <p style="text-indent:0px;">when life gives you a toy mouse, balance it on top of your head</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/inspirational/plant.jpg' %}" alt="">
+    <p style="text-indent:0px;">if you want to become a plant, simply <em>be</em> one.</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/inspirational/reach.jpg' %}" alt="">
+    <p style="text-indent:0px;">reach for the stars, or at least the camera ;)</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/inspirational/sickofyo.jpg' %}" alt="">
+    <p style="text-indent:0px;">sick of your attitude.</p>
+  </div>
+
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/royal/throne.jpg' %}" alt="">
+    <p style="text-indent:0px;">hello, I see you have come to visit me at my throne.</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/inspirational/tv.jpg' %}" alt="">
+    <p style="text-indent:0px;">why watch tv when you could watch me??</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/royal/crown.jpg' %}" alt="">
+    <p style="text-indent:0px;">my coronation is complete! 👑</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/royal/dresser.jpg' %}" alt="">
+    <p style="text-indent:0px;">clothing storage is irrelevant when I could be napping here!</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/royal/empressoftheland.jpg' %}" alt="">
+    <p style="text-indent:0px;">taking a survey of my surroundings.</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/royal/looking.jpg' %}" alt="">
+    <p style="text-indent:0px;">I must keep watch over my kingdom.</p>
+  </div>
+
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/tasks/couch.jpg' %}" alt="">
+    <p style="text-indent:0px;">it is my personal responsibility to keep the couch from falling apart. yes, of course this is a concern!</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/royal/sphinx.jpg' %}" alt="">
+    <p style="text-indent:0px;">realistic sphinx in a contemporary setting.</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/tasks/charging.jpg' %}" alt="">
+    <p style="text-indent:0px;">charging, battery at 99% ⚡</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/tasks/fullycharged.jpg/' %}" alt="">
+    <p style="text-indent:0px;">fully charged!</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/tasks/holdingtherugdown.jpg' %}" alt="">
+    <p style="text-indent:0px;">don't bother me, I'm keeping the rug from running away.</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/tasks/lickimust.jpg' %}" alt="">
+    <p style="text-indent:0px;">hehe</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/tasks/vampirelick.jpg' %}" alt="">
+    <p style="text-indent:0px;">my vampire form hath returnèd</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/tasks/wallholder.jpg' %}" alt="">
+    <p style="text-indent:0px;">ugh can't you see I have to hold the wall here all day.</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/finalphoto.jpg' %}" alt="">
+    <p style="text-indent:0px;">don't forget, I am everywhere and nowhere at all times.</p>
+  </div>
+  <div class="ff">
+    <img src="{% static '/images/bellaphotos/royal/lurking.jpg' %}" alt="">
+    <p style="text-indent:0px;">come, I have something to show you.</p>
+  </div>
+{% endblock %}
