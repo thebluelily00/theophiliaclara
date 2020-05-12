@@ -37,7 +37,7 @@ Home
   </div>
   <div class="newpostbox">
     {% for post in posts %}
-    <div class="p {{ post.tag }}">
+    <div class="p hp {{ post.tag }}">
       <a href="{% url 'post_detail' pk=post.pk %}">
         <h1 class="pt">{{ post.title }}</h1>
         <h3>{{ post.published_date }}</h3>
