@@ -194,7 +194,7 @@ h1{
 
 #filter{
   max-height:100px;
-  overflow: scroll;
+  overflow:visible;
   padding:0px;
   text-align: center;
 }
