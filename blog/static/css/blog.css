@@ -259,6 +259,16 @@ h1{
   text-align: center;
 }
 
+.basebutton{
+  border: none;
+  background: none;
+  animation-duration: 1s;
+}
+
+.basebutton:hover{
+  cursor: pointer;
+}
+
 .email{
   padding:10px;
   background: #eee;
