@@ -25,6 +25,7 @@
 
       gtag('config', 'UA-161239002-1');
     </script>
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/85a546cf248f7ef646a528732/05e81413dcb229472c0c3c718.js");</script>
   </head>
   <body>
     {% if user.is_authenticated %} <!-- add, drafts, log out bar -->
@@ -96,16 +97,26 @@
       {% block content %} <!-- unique content for each page -->
       {% endblock %}
       <div class="sidebar">
-        <div class="covid">
-          <h3 id="agh"><a href="/covid19"><span class="ooh">stuck at home? </span> <span id="ooh">don't know what to do? </span> <span class='ooh'>click here!</span></a></h3>
+        <div class="email-signup">
+          <!-- Begin Mailchimp Signup Form -->
+          <div id="mc_embed_signup">
+          <form action="https://theophiliaclara.us8.list-manage.com/subscribe/post?u=85a546cf248f7ef646a528732&amp;id=fedf6291c4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          	<h2>Join the newsletter!</h2>
+          	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_85a546cf248f7ef646a528732_fedf6291c4" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </form>
+          </div>
+          <!--End mc_embed_signup-->
         </div>
-        <!--<div class="instag">
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/1588a3f6d58856198ccb6b570839ed4c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-        </div>-->
         <div class="spotif">
           <iframe src="https://open.spotify.com/embed/playlist/24VzM1S5za41mUGJu0xog7" id="playlist" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
         <br>
+        <div class="covid">
+          <h3 id="agh"><a href="/covid19"><span class="ooh">stuck at home? </span> <span id="ooh">don't know what to do? </span> <span class='ooh'>click here!</span></a></h3>
+        </div>
         <div class="pinte">
           <a data-pin-do="embedUser" data-pin-board-width="300" data-pin-scale-height="600" data-pin-scale-width="60" href="https://www.pinterest.com/theophiliaclara/"></a>
         </div>
