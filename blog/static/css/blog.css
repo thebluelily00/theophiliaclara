@@ -7,12 +7,17 @@ body, html{
 }
 
  a:not(.oa){
-  color:#CDAAAE;
+  color:black;
+  text-decoration: none;
+}
+
+#theone a{
+  color:#bb7625;
   text-decoration: none;
 }
 
 #ltkwidget-version-two631799299{
-  width:85%;
+  width:50vw;
   margin:auto;
 }
 
@@ -55,7 +60,7 @@ body, html{
 #contrast a{color:white;}
 
 #menu{
-  background-color: #F5F4F4;
+  background: linear-gradient(-45deg rgba(208,132,42,0.45),rgba(),rgba(0,0,0,0));
   color:#B17A80;
   padding:5px;
   text-align:center;
@@ -64,8 +69,9 @@ body, html{
 
 
 #menu a{
-  color:#B17A80;
+  color:#bb7625;
   font-size: 1.2em;
+  text-decoration: none;
 }
 
 #menu h3, #menu span, .tsocial li, .tsocial{
@@ -105,7 +111,7 @@ body, html{
 .pi{
   text-align: center;
   margin: auto;
-  display: block;
+  width: 100%;
 }
 
 .socc{
@@ -154,13 +160,13 @@ h1{
 }
 
 .footer{
-  background-color:#D9B8B8;
-  color:white;
+  background: linear-gradient(rgba(0,0,0,0),rgba(208,132,42,0.05),rgba(208,132,42,0.20),rgba(208,132,42,0.45));
+  color:rgb(208,132,42);
   text-align: center;
 }
 
 .footer a{
-  color:white;
+color:rgb(208,132,42);
 }
 
 .footer h2{
@@ -222,8 +228,10 @@ h1{
 
 .p{
   padding:20px;
-  margin:40px;
-  border:3px solid #EFE8E8;
+  margin:20px;
+  width:250px;
+  display: inline-block;
+
 }
 
 .filtration{
@@ -234,17 +242,17 @@ h1{
 
 .p h3, .p h4{
   text-align:center;
-  color:#B17A80;
+  color:black;
 }
 
 .p li{
   line-height: 200%;
 }
 
-.p:first-child{
+/*.p:first-child{
   background-color: #EFE8E8;
   background: #EFE8E8;
-}
+}*/
 
 /* mailchimp email signup formatting */
 
@@ -451,9 +459,10 @@ p{
   padding-left:30px;
   padding-right:30px;
   padding-bottom:30px;
+  padding-top:30px;
   /*border-top:4px solid #D9B8B8;
   border-bottom:4px solid #D9B8B8;*/
-  margin-top:40px;
+  margin-top:20px;
   margin-right:40px;
 }
 

@@ -39,6 +39,7 @@
     {% endif %}
   <div id="menu"> <!-- home, about, social media buttons -->
       <div class="cont">
+
             <a href="/" class="help">Home</a>
             <ul class="tsocial">
                 <li><a class="fab fa-pinterest-p" href="https://www.pinterest.com/theophiliaclara/" target="blank" id="pin"></a></li>
@@ -48,6 +49,7 @@
                 <!--<li style="vertical-align: text-bottom;"><a class="fab" href="https://www.liketoknow.it/theophiliaclara"><img src="{% static '/images/LIKEtoKNOW.it_Icon.png' %}" alt="liketoknow.it icon" width="25px"></a></li>-->
             </ul>
             <a href="{% url 'about' %}" class="help">About</a>
+
         <!--  <div id="c-sty">
               <a href="">Style</a>
               <ul id="sty">
@@ -90,47 +92,41 @@
   <div id="other"> <!-- not menus -->
     <div id="header">
       <h1 id="theone">{% block header %}{% endblock %}</h1>
-      <h2 style="text-align:center;font-weight:normal;"><em>live inspired + live well</em></h2>
+      <!-- <h2 style="text-align:center;font-weight:normal;">live inspired + live well</h2>-->
 
     </div>
     <div class="o2">
       {% block content %} <!-- unique content for each page -->
       {% endblock %}
       <div class="sidebar">
-        <div class="email-signup">
-          <!-- Begin Mailchimp Signup Form -->
-          <div id="mc_embed_signup">
-          <form action="https://theophiliaclara.us8.list-manage.com/subscribe/post?u=85a546cf248f7ef646a528732&amp;id=fedf6291c4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          	<h2>Join the newsletter!</h2>
-          	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_85a546cf248f7ef646a528732_fedf6291c4" tabindex="-1" value=""></div>
-              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button basebutton"></div>
-          </form>
+          <div class="pinte"><a data-pin-do="embedUser" data-pin-board-width="300" data-pin-scale-height="600" data-pin-scale-width="60" href="https://www.pinterest.com/theophiliaclara/"></a></div>
+          <br>
+          <div class="spotif"><iframe src="https://open.spotify.com/embed/playlist/24VzM1S5za41mUGJu0xog7" id="playlist" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+          <br>
+          <!--<a class="twitter-timeline" data-height="550" data-width="350" href="https://twitter.com/theophiliaclara?ref_src=twsrc%5Etfw">Tweets by theophiliaclara</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+          <div class="email-signup">
+            <!-- Begin Mailchimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="https://theophiliaclara.us8.list-manage.com/subscribe/post?u=85a546cf248f7ef646a528732&amp;id=fedf6291c4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <h2>Join the newsletter!</h2>
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_85a546cf248f7ef646a528732_fedf6291c4" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button basebutton"></div>
+            </form>
+            </div>
+            <!--End mc_embed_signup-->
           </div>
-          <!--End mc_embed_signup-->
-        </div>
-        <div class="spotif">
-          <iframe src="https://open.spotify.com/embed/playlist/24VzM1S5za41mUGJu0xog7" id="playlist" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
-        <br>
-        <div class="covid">
-          <h3 id="agh"><a href="/covid19"><span class="ooh">stuck at home? </span> <span id="ooh">don't know what to do? </span> <span class='ooh'>click here!</span></a></h3>
-        </div>
-        <div class="pinte">
-          <a data-pin-do="embedUser" data-pin-board-width="300" data-pin-scale-height="600" data-pin-scale-width="60" href="https://www.pinterest.com/theophiliaclara/"></a>
-        </div>
-        <br>
-        <a class="twitter-timeline" data-height="550" data-width="350" href="https://twitter.com/theophiliaclara?ref_src=twsrc%5Etfw">Tweets by theophiliaclara</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-    </div>
     <div class="footer"> <!-- 3 sections with links -->
       <div class="col1"> <!-- filter -->
         <h2 class='ex'>Filter</h2>
         <ul id="filter">
+          🍂
           {% for tag in tags %}
             <li class='tag'><a href="{% url 'tags' tag=tag %}">{{ tag }}</a></li>
           {% endfor %}
+          🍂
         </ul>
       </div>
       <div class="col2"> <!-- social media -->

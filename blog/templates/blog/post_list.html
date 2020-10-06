@@ -27,14 +27,25 @@ Home
     {% load static %}
 {% block content %}
 <div id="posts" class="left">
-  <div class="filtration">
+  <!--<div id="ltkwidget-version-two631799299" data-appid="631799299" class="ltkwidget-version-two">
+    <script>var rsLTKLoadApp="0",rsLTKPassedAppID="631799299";</script>
+    <script type="text/javascript" src="https://widgets-static.rewardstyle.com/widgets2_0/client/pub/ltkwidget/ltkwidget.js"></script>
+    <div widget-dashboard-settings="" data-appid="631799299" data-userid="345027" data-rows="2" data-cols="3" data-showframe="true" data-padding="4" data-profileid="5d86b92c-8b21-11ea-8867-4ad2fc426daa">
+      <div class="rs-ltkwidget-container">
+        <div ui-view=""></div>
+      </div>
+    </div>
+    <noscript>This content requires JavaScript to be enabled, and the site or browser may be disabling it. Try reactivating it to view this content.</noscript>
+  </div>-->
+
+  <!--<div class="filtration">
     <h2 id="fhh">Filter:</h2>
     <ul id="topfilt">
       {% for tag in tags %}
         <li class='tf'><a href="{% url 'tags' tag=tag %}" class="oa">{{ tag }}</a></li>
       {% endfor %}
     </ul>
-  </div>
+  </div>-->
   <div class="newpostbox">
     {% for post in posts %}
     <div class="p hp {{ post.tag }}">
