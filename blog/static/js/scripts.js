@@ -5,7 +5,7 @@ $( document ).ready(function(){
   var d = new Date();
   $('.copy').html('<a>&copy '+d.getFullYear()+" Theophilia Clara</a>");
 
-  $('.hp:nth-child(3)').after('<div id="ltkwidget-version-two631799299" data-appid="631799299" class="ltkwidget-version-two"><script>var rsLTKLoadApp="0",rsLTKPassedAppID="631799299";</script><script type="text/javascript" src="https://widgets-static.rewardstyle.com/widgets2_0/client/pub/ltkwidget/ltkwidget.js"></script><div widget-dashboard-settings="" data-appid="631799299" data-userid="345027" data-rows="2" data-cols="3" data-showframe="true" data-padding="4" data-profileid="5d86b92c-8b21-11ea-8867-4ad2fc426daa"><div class="rs-ltkwidget-container"><div ui-view=""></div></div></div><noscript>This content requires JavaScript to be enabled, and the site or browser may be disabling it. Try reactivating it to view this content.</noscript></div>');
+  $('.hp:first-child').after('<div id="ltkwidget-version-two631799299" data-appid="631799299" class="ltkwidget-version-two"><script>var rsLTKLoadApp="0",rsLTKPassedAppID="631799299";</script><script type="text/javascript" src="https://widgets-static.rewardstyle.com/widgets2_0/client/pub/ltkwidget/ltkwidget.js"></script><div widget-dashboard-settings="" data-appid="631799299" data-userid="345027" data-rows="2" data-cols="3" data-showframe="true" data-padding="4" data-profileid="5d86b92c-8b21-11ea-8867-4ad2fc426daa"><div class="rs-ltkwidget-container"><div ui-view=""></div></div></div><noscript>This content requires JavaScript to be enabled, and the site or browser may be disabling it. Try reactivating it to view this content.</noscript></div>');
 
  //nothing really necessary
   $("#id_title").attr('placeholder','Title');

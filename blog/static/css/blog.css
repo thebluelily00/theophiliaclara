@@ -111,7 +111,7 @@ body, html{
 .pi{
   text-align: center;
   margin: auto;
-  width: 100%;
+  width: 40%;
 }
 
 .socc{
@@ -229,9 +229,8 @@ color:rgb(208,132,42);
 .p{
   padding:20px;
   margin:20px;
-  width:250px;
-  display: inline-block;
-
+  border:1px solid rgba(0,0,0,.1);
+  border-radius: 16px;
 }
 
 .filtration{
@@ -459,10 +458,10 @@ p{
   padding-left:30px;
   padding-right:30px;
   padding-bottom:30px;
-  padding-top:30px;
+  padding-top:10px;
   /*border-top:4px solid #D9B8B8;
   border-bottom:4px solid #D9B8B8;*/
-  margin-top:20px;
+  margin-top:10px;
   margin-right:40px;
 }
 
@@ -578,7 +577,7 @@ p{
 
   .p{
     margin:35px;
-    padding:15px;
+    padding:10px;
   }
 
   .litness{
